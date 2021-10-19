@@ -1,4 +1,5 @@
-﻿using DigitalDistributionStoreLibrary.DataAccess;
+﻿using DataObjects.Repository;
+using DigitalDistributionStoreLibrary.DataAccess;
 using Product;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace DigitalDistributionStoreWinApp
 {
     public partial class frmCategoryInsert : Form
     {
+        ICategoryDAO cDao = new CategoryDAO();
+
         public frmCategoryInsert()
         {
             InitializeComponent();
@@ -37,7 +40,7 @@ namespace DigitalDistributionStoreWinApp
             };
             try
             {
-                CategoryDAO.Instance.InsertCategory(category);
+                cDao.InsertCategory(category);
             }                
             catch (Exception ex)
             {

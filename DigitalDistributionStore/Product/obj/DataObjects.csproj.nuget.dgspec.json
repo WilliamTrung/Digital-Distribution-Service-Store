@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj": {}
+    "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj": {}
   },
   "projects": {
     "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Business Object\\BusinessObjects.csproj": {
@@ -52,77 +52,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj",
-        "projectName": "DigitalDistributionStoreWinApp",
-        "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj",
-        "packagesPath": "C:\\Users\\Loliizabezt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Loliizabezt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0-windows7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0-windows7.0": {
-            "targetAlias": "net5.0-windows",
-            "projectReferences": {
-              "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj": {
-                "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
-          "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[3.0.1, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"

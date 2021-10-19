@@ -1,4 +1,5 @@
-﻿using DigitalDistributionStoreLibrary.DataAccess;
+﻿using DataObjects.Repository;
+using DigitalDistributionStoreLibrary.DataAccess;
 using Product;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace DigitalDistributionStoreWinApp
 {
     public partial class frmCategoryUpdate : Form
     {
+        ICategoryDAO cDao = new CategoryDAO();
         public frmCategoryUpdate(int categoryId, string categoryName)
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace DigitalDistributionStoreWinApp
             };
             try
             {
-                CategoryDAO.Instance.UpdateCategory(category);
+                cDao.UpdateCategory(category);
             }
             catch (Exception ex)
             {

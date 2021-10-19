@@ -590,18 +590,29 @@
           }
         }
       },
-      "DigitalDistributionStoreLibrary/1.0.0": {
+      "BusinessObjects/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BusinessObjects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessObjects.dll": {}
+        }
+      },
+      "DataObjects/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "BusinessObjects": "1.0.0",
           "Microsoft.Data.SqlClient": "3.0.1",
           "Microsoft.Extensions.Configuration.Json": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/DigitalDistributionStoreLibrary.dll": {}
+          "bin/placeholder/DataObjects.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DigitalDistributionStoreLibrary.dll": {}
+          "bin/placeholder/DataObjects.dll": {}
         }
       }
     }
@@ -1840,15 +1851,20 @@
         "version.txt"
       ]
     },
-    "DigitalDistributionStoreLibrary/1.0.0": {
+    "BusinessObjects/1.0.0": {
       "type": "project",
-      "path": "../Product/DigitalDistributionStoreLibrary.csproj",
-      "msbuildProject": "../Product/DigitalDistributionStoreLibrary.csproj"
+      "path": "../Business Object/BusinessObjects.csproj",
+      "msbuildProject": "../Business Object/BusinessObjects.csproj"
+    },
+    "DataObjects/1.0.0": {
+      "type": "project",
+      "path": "../Product/DataObjects.csproj",
+      "msbuildProject": "../Product/DataObjects.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "DigitalDistributionStoreLibrary >= 1.0.0",
+      "DataObjects >= 1.0.0",
       "Microsoft.Data.SqlClient >= 3.0.1",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0"
     ]
@@ -1880,8 +1896,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj": {
-              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj"
+            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj": {
+              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj"
             }
           }
         }

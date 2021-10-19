@@ -589,6 +589,16 @@
             "rid": "win"
           }
         }
+      },
+      "BusinessObjects/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BusinessObjects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessObjects.dll": {}
+        }
       }
     }
   },
@@ -1825,10 +1835,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BusinessObjects/1.0.0": {
+      "type": "project",
+      "path": "../Business Object/BusinessObjects.csproj",
+      "msbuildProject": "../Business Object/BusinessObjects.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BusinessObjects >= 1.0.0",
       "Microsoft.Data.SqlClient >= 3.0.1",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0"
     ]
@@ -1839,9 +1855,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj",
-      "projectName": "DigitalDistributionStoreLibrary",
-      "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj",
+      "projectName": "DataObjects",
+      "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DataObjects.csproj",
       "packagesPath": "C:\\Users\\Loliizabezt\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\obj\\",
       "projectStyle": "PackageReference",
@@ -1859,7 +1875,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Business Object\\BusinessObjects.csproj": {
+              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Business Object\\BusinessObjects.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

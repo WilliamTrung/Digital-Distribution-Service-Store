@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="CategoryManagement\frmCategoryManagement.cs">
+    <Compile Update="Admin\CategoryManagement\frmCategoryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CategoryManagement\frmCategoryInsert.cs">
+    <Compile Update="Admin\CategoryManagement\frmCategoryInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmProductManagement.cs">
+    <Compile Update="Admin\ProductManagement\frmProductManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CategoryManagement\frmCategoryUpdate.cs">
+    <Compile Update="Admin\CategoryManagement\frmCategoryUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

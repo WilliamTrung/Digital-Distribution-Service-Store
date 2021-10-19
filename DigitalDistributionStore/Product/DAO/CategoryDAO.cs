@@ -1,4 +1,5 @@
-﻿using DigitalDistributionStoreWinApp;
+﻿using DataObjects.Repository;
+using DigitalDistributionStoreWinApp;
 using Microsoft.Data.SqlClient;
 using Product;
 using System;
@@ -8,7 +9,7 @@ using System.Linq;
 
 namespace DigitalDistributionStoreLibrary.DataAccess
 {
-    public class CategoryDAO
+    public class CategoryDAO : ICategoryDAO
     {
         SqlConnection connection;
         SqlCommand command;
@@ -16,7 +17,7 @@ namespace DigitalDistributionStoreLibrary.DataAccess
 
         private static CategoryDAO instance = null;
         private static readonly object instanceLock = new object();
-        private CategoryDAO() {}
+        public CategoryDAO() {}
         public static CategoryDAO Instance
         {
             get

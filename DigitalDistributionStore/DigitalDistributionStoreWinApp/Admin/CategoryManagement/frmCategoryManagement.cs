@@ -1,4 +1,5 @@
-﻿using DigitalDistributionStoreLibrary.DataAccess;
+﻿using DataObjects.Repository;
+using DigitalDistributionStoreLibrary.DataAccess;
 using Product;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,13 @@ namespace DigitalDistributionStoreWinApp
         {
             InitializeComponent();
         }
+        ICategoryDAO cDao = new CategoryDAO();
         private void LoadCategories()
         {
             var categories = new List<Category>();
             try
             {
-                categories = CategoryDAO.Instance.GetCatagories();
+                categories =cDao.GetCategories();
                 //clear bindings
                 txtCategoryId.DataBindings.Clear();
                 txtCategoryName.DataBindings.Clear();
@@ -75,7 +77,7 @@ namespace DigitalDistributionStoreWinApp
             {
                 int id = Int32.Parse(txtCategoryId.Text);
                 var category = new Product.Category(id, txtCategoryName.Text);
-                CategoryDAO.Instance.RemoveCategory(category);
+                cDao.RemoveCategory(category);
                 LoadCategories();
             }
             catch (Exception ex)
