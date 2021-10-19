@@ -1,0 +1,12 @@
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DigitalDistributionStoreLibrary.deps.json
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DigitalDistributionStoreLibrary.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\ref\DigitalDistributionStoreLibrary.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DigitalDistributionStoreLibrary.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.AssemblyInfoInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.AssemblyInfo.cs
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\ref\DigitalDistributionStoreLibrary.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DigitalDistributionStoreLibrary.csproj.AssemblyReference.cache

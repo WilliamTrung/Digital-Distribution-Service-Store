@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net5.0-windows7.0": {
       "Azure.Core/1.6.0": {
         "type": "package",
         "dependencies": {
@@ -588,6 +588,20 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "DigitalDistributionStoreLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "3.0.1",
+          "Microsoft.Extensions.Configuration.Json": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DigitalDistributionStoreLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DigitalDistributionStoreLibrary.dll": {}
         }
       }
     }
@@ -1825,10 +1839,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DigitalDistributionStoreLibrary/1.0.0": {
+      "type": "project",
+      "path": "../Product/DigitalDistributionStoreLibrary.csproj",
+      "msbuildProject": "../Product/DigitalDistributionStoreLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net5.0-windows7.0": [
+      "DigitalDistributionStoreLibrary >= 1.0.0",
       "Microsoft.Data.SqlClient >= 3.0.1",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0"
     ]
@@ -1839,27 +1859,31 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj",
-      "projectName": "DigitalDistributionStoreLibrary",
-      "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj",
+      "projectName": "DigitalDistributionStoreWinApp",
+      "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\DigitalDistributionStoreWinApp.csproj",
       "packagesPath": "C:\\Users\\Loliizabezt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\obj\\",
+      "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalDistributionStoreWinApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Loliizabezt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net5.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "projectReferences": {}
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj": {
+              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\Product\\DigitalDistributionStoreLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1869,8 +1893,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
         "dependencies": {
           "Microsoft.Data.SqlClient": {
             "target": "Package",
@@ -1894,6 +1918,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"

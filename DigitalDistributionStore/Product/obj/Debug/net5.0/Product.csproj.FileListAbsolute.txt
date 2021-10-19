@@ -1,0 +1,12 @@
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\Product.deps.json
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\Product.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\ref\Product.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\Product.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.csproj.AssemblyReference.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.AssemblyInfoInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.AssemblyInfo.cs
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.csproj.CoreCompileInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\ref\Product.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\Product.pdb
