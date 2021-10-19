@@ -1,0 +1,15 @@
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DataObjects.deps.json
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DataObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\ref\DataObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\DataObjects.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\BusinessObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\bin\Debug\net5.0\BusinessObjects.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.csproj.AssemblyReference.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.AssemblyInfoInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.AssemblyInfo.cs
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.csproj.CoreCompileInputs.cache
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.csproj.CopyComplete
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\ref\DataObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\Product\obj\Debug\net5.0\DataObjects.pdb

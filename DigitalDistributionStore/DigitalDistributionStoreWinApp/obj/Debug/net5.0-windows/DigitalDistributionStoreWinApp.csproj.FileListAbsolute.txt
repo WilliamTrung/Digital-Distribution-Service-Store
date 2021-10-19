@@ -46,8 +46,10 @@ C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\Digital
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\ref\DigitalDistributionStoreWinApp.dll
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\DigitalDistributionStoreWinApp.pdb
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\DigitalDistributionStoreWinApp.genruntimeconfig.cache
-C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\DigitalDistributionStoreLibrary.dll
-C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\DigitalDistributionStoreLibrary.pdb
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\DigitalDistributionStoreWinApp.frmCategoryInsert.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\DigitalDistributionStoreWinApp.frmCategoryManagement.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\obj\Debug\net5.0-windows\DigitalDistributionStoreWinApp.frmCategoryUpdate.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\BusinessObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\DataObjects.dll
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\DataObjects.pdb
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalDistributionStoreWinApp\bin\Debug\net5.0-windows\BusinessObjects.pdb

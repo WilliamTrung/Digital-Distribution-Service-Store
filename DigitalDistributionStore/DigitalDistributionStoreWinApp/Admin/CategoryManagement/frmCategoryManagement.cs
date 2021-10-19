@@ -37,6 +37,8 @@ namespace DigitalDistributionStoreWinApp
             catch (Exception ex)
             {
                 dgvCategories.DataSource = categories;
+                txtCategoryId.Clear();
+                txtCategoryName.Clear();
                 MessageBox.Show(ex.Message, "Error");
             }           
         }

@@ -34,12 +34,17 @@ namespace DigitalDistributionStoreWinApp
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            var category = new Category
-            {
-                categoryName = txtCategoryName.Text
-            };
             try
             {
+                string name = txtCategoryName.Text;
+                if(name.Trim().Length == 0)
+                {
+                    throw new Exception("Category name must not be blank!");
+                }
+                var category = new Category
+                {
+                    categoryName = txtCategoryName.Text
+                };                               
                 cDao.InsertCategory(category);
             }                
             catch (Exception ex)

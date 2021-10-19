@@ -25,6 +25,11 @@ namespace DigitalDistributionStoreWinApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string name = txtCategoryName.Text;
+            if (name.Trim().Length == 0)
+            {
+                throw new Exception("Category name must not be blank!");
+            }
             var category = new Category
             {
                 categoryName = txtCategoryName.Text,
