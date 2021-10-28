@@ -16,7 +16,8 @@ namespace BusinessObject
         public DateTime OrderDate { get; set; }
         [Required]
         public int MemberID { get; set; }
-
+        [Required]
+        public Boolean Status { get; set; }
         public virtual Member Member { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

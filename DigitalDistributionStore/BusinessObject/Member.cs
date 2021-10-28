@@ -18,7 +18,8 @@ namespace BusinessObject
         public string Email { get; set; }
         [Required, MaxLength(20)]
         public string Password { get; set; }
-
+        [Required]
+        public Boolean Status { get; set; }
         public ICollection<Order> Orders { get; set; }
     }
 }
