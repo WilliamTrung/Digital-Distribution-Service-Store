@@ -69,5 +69,38 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
+        public static List<Member> SearchByName(string search)
+        {
+            List<Member> list = null;
+            try
+            {
+                
+                using(var context = new DBContext())
+                {
+                    list = context.Members.Where(member => member.MemberName.Contains(search)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return list;
+        }
+        public static Member Login(string email, string password)
+        {
+            Member loginUser = null;
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    loginUser = context.Members.SingleOrDefault(member => member.Email == email && member.Password == password);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return loginUser;
+        }
     }
 }

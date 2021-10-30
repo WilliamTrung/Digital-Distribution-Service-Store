@@ -94,5 +94,22 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
+        public static List<Product> SearchByName(string search)
+        {
+            List<Product> list = null;
+            try
+            {
+
+                using (var context = new DBContext())
+                {
+                    list = context.Products.Where(product => product.ProductName.Contains(search)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return list;
+        }
     }
 }

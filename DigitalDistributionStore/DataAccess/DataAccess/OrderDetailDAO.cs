@@ -71,5 +71,51 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
+        public static List<OrderDetail> GetOrderDetailsByOrder(Order order)
+        {
+            List<OrderDetail> list = new List<OrderDetail>();
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    list = context.OrderDetails.Where(order_detail => order_detail.OrderID == order.OrderID).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return list;
+        }
+        private static OrderDetail GenerateOrderDetail(Product product, Order order, int quantity)
+        {
+            OrderDetail detail = new OrderDetail()
+            {
+                Order = order,
+                OrderID = order.OrderID,
+                Product = product,
+                ProductID = product.ProductID,
+                Quantity = quantity,
+                UnitPrice = product.UnitPrice
+            };
+            return detail;
+        }
+        public static void InsertOrderDetail(Product product, Order order, int quantity)
+        {
+            try
+            {
+                OrderDetail detail = GenerateOrderDetail(product, order, quantity);
+                using (var context = new DBContext())
+                {
+                    context.Add(detail);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

@@ -71,5 +71,21 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
+        public static List<Order> GetOrdersByDate(DateTime start, DateTime end)
+        {
+            List<Order> list = new List<Order>();
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    list = context.Orders.Where(order => order.OrderDate >= start && order.OrderDate <= end).ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return list;
+        }
     }
 }
