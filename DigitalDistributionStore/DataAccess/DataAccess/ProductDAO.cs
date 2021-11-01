@@ -102,7 +102,7 @@ namespace DataAccess
 
                 using (var context = new DBContext())
                 {
-                    list = context.Products.Where(product => product.ProductName.Contains(search)).ToList();
+                    list = context.Products.Where(product => product.ProductName.Contains(search)).OrderBy(p => p.ProductName).ToList();
                 }
             }
             catch (Exception ex)
