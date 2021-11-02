@@ -14,5 +14,7 @@ namespace DataAccess.Interface
         public void Update(Member member);
         public void Delete (Member member);
         public List<Member> SearchByName(Member member);
+
+        public void ChangeStatus(Member member);
     }
 }

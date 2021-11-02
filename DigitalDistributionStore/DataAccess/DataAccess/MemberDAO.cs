@@ -102,5 +102,21 @@ namespace DataAccess
             }
             return loginUser;
         }
+        public static void ChangeStatus(Member member)
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    member.Status = !member.Status;
+                    context.Entry<Member>(member).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    context.SaveChanges();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

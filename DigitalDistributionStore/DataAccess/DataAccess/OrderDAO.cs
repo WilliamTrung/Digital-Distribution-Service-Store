@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,16 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    ListOrder = context.Orders.OrderBy(o => o.OrderDate).ToList();
+                    ListOrder = context.Orders.OrderBy(o => o.OrderDate).Include(o => o.Member).ToList();
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
             return ListOrder;
         }
-        public static void AddNew(Order order)
+        public static void Insert(Order order)
         {
             try
             {
