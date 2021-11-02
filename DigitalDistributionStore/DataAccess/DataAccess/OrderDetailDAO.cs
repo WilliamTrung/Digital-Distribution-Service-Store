@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,31 +10,46 @@ namespace DataAccess
 {
     public class OrderDetailDAO
     {
-        public static List<OrderDetail> GetOrderDetails()
+        public static List<OrderDetail> GetOrderDetailsByOrder(Order order)
         {
             var ListOrderDetails = new List<OrderDetail>();
             try
             {
                 using (var context = new DBContext())
                 {
-                    ListOrderDetails = context.OrderDetails.ToList();
+                    ListOrderDetails = context.OrderDetails.Include(d => d.Order).Where(d => d.OrderID == order.OrderID).ToList();
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
             return ListOrderDetails;
         }
-        public static void AddNew(OrderDetail orderDetail)
+
+        public static void Remove(OrderDetail detail)
         {
             try
             {
                 using (var context = new DBContext())
                 {
-                    context.Add(orderDetail);
-                    context.SaveChanges();
+                    if(detail.Order.Status == false)
+                    {
+                        throw new Exception("This order has ended! Cannot be removed!");
+                    }
+                    else
+                    {
+                        var check = context.OrderDetails.SingleOrDefault(d => d.OrderID == detail.OrderID);
+                        if (check != null)
+                        {
+                            context.Remove(detail);
+                            context.SaveChanges();
+                        }
+                        else
+                        {
+                            throw new Exception("This detail is not found!");
+                        }
+                    }                  
                 }
             }
             catch (Exception)
@@ -41,53 +57,29 @@ namespace DataAccess
                 throw;
             }
         }
-        public static void Remove(OrderDetail orderDetail)
+        public static void Update(OrderDetail detail)
         {
             try
             {
-                using (var context = new DBContext())
+                if (detail.Order.Status == false)
                 {
-                    context.Remove(orderDetail);
-                    context.SaveChanges();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        public static void Update(OrderDetail orderDetail)
-        {
-            try
-            {
-                using (var context = new DBContext())
+                    throw new Exception("This order has ended! Cannot be updated!");
+                } 
+                else
                 {
-                    context.Entry<OrderDetail>(orderDetail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    context.SaveChanges();
-                }
+                    using (var context = new DBContext())
+                    {
+                        context.Entry<OrderDetail>(detail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                }               
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
         }
-        public static List<OrderDetail> GetOrderDetailsByOrder(Order order)
-        {
-            List<OrderDetail> list = new List<OrderDetail>();
-            try
-            {
-                using (var context = new DBContext())
-                {
-                    list = context.OrderDetails.Where(order_detail => order_detail.OrderID == order.OrderID).ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            return list;
-        }
-        private static OrderDetail GenerateOrderDetail(Product product, Order order, int quantity)
+        public static OrderDetail GenerateOrderDetail(Product product, Order order, int quantity)
         {
             OrderDetail detail = new OrderDetail()
             {
@@ -100,14 +92,21 @@ namespace DataAccess
             };
             return detail;
         }
-        public static void InsertOrderDetail(Product product, Order order, int quantity)
+        public static void Insert(OrderDetail detail)
         {
             try
             {
-                OrderDetail detail = GenerateOrderDetail(product, order, quantity);
                 using (var context = new DBContext())
                 {
-                    context.Add(detail);
+                    var check = context.OrderDetails.SingleOrDefault(d => d.OrderID == detail.OrderID && d.ProductID == detail.ProductID);
+                    if (check == null)
+                    {
+                        context.Add(detail);                       
+                    }
+                    else
+                    {
+                        context.Entry<OrderDetail>(detail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    }
                     context.SaveChanges();
                 }
             }

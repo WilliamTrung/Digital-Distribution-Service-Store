@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -99,10 +100,9 @@ namespace DataAccess
             List<Product> list = null;
             try
             {
-
                 using (var context = new DBContext())
                 {
-                    list = context.Products.Where(product => product.ProductName.Contains(search)).ToList();
+                    list = context.Products.Where(product => product.ProductName.Contains(search)).OrderBy(p => p.ProductName).Include(p => p.Category).ToList();
                 }
             }
             catch (Exception ex)

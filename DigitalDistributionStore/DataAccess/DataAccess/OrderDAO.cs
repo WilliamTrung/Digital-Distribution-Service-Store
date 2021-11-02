@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,16 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    ListOrder = context.Orders.ToList();
+                    ListOrder = context.Orders.OrderBy(o => o.OrderDate).Include(o => o.Member).ToList();
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
             return ListOrder;
         }
-        public static void AddNew(Order order)
+        public static void Insert(Order order)
         {
             try
             {
@@ -47,8 +47,17 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    context.Remove(order);
-                    context.SaveChanges();
+                    var check = context.Orders.SingleOrDefault(o => o.OrderID == order.OrderID);
+                    //status == true  => order can still be updated
+                    if(check.Status == true)
+                    {
+                        context.Remove(order);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("This order has already closed!");
+                    }            
                 }
             }
             catch (Exception)
@@ -62,14 +71,77 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    context.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    context.SaveChanges();
+                    var check = context.Orders.SingleOrDefault(o => o.OrderID == order.OrderID);
+                    //status == true  => order can still be updated
+                    if (check.Status == true)
+                    {
+                        context.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("This order has already closed!");
+                    }
+                    
                 }
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
+        }
+        public static void Close(Order order)
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var check = context.Orders.SingleOrDefault(o => o.OrderID == order.OrderID);
+                    //status == true  => order can still be updated
+                    if (check.Status == true)
+                    {
+                        order.Status = false;
+                        context.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("This order has already closed!");
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public static double TotalOf(Order order)
+        {
+            double result = 0;
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    var list_detail = context.OrderDetails.Where(d => d.OrderID == order.OrderID).ToList();
+                    if(list_detail.Count > 0)
+                    {
+                        foreach (var detail in list_detail)
+                        {
+                            result += detail.UnitPrice * detail.Quantity;
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("This order has no detail!");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return result;
         }
         public static List<Order> GetOrdersByDate(DateTime start, DateTime end)
         {
