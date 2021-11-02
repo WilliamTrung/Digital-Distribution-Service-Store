@@ -20,6 +20,8 @@ namespace BusinessObject
         public string Password { get; set; }
         [Required]
         public Boolean Status { get; set; }
+        [Required]
+        public Boolean IsAdmin { get; set; }
         public ICollection<Order> Orders { get; set; }
     }
 }
