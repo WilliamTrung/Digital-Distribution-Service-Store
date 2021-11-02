@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace DigitalStoreApp
 {
-    public partial class Form1 : Form
+    public partial class ProfileControl : UserControl
     {
-        public Form1()
+        public ProfileControl()
         {
             InitializeComponent();
         }
-
     }
 }
