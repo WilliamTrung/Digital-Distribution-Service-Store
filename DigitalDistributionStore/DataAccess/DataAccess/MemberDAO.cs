@@ -60,8 +60,16 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    context.Entry<Member>(member).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                    context.SaveChanges();
+                    var check = context.Members.SingleOrDefault(m => m.Email == member.Email);
+                    if(check == null)
+                    {
+                        context.Entry<Member>(member).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("This email has already existed!");
+                    }
                 }
             }
             catch (Exception e)
