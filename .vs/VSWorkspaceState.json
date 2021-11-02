@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DigitalDistributionStore",
+    "\\DigitalDistributionStore\\BusinessObject",
+    "\\DigitalDistributionStore\\DigitalStoreApp"
   ],
-  "SelectedNode": "\\DigitalDistributionStore.sln",
+  "SelectedNode": "\\DigitalDistributionStore\\DigitalDistributionStore.sln",
   "PreviewInSolutionExplorer": false
 }
