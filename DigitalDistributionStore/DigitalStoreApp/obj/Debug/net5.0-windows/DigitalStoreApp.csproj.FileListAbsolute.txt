@@ -79,3 +79,4 @@ W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributio
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.OrderControl.resources
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.ProductControl.resources
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.ProfileControl.resources
+W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.AdminManagementControl.resources

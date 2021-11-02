@@ -38,5 +38,13 @@ namespace DigitalStoreApp
         {
             Application.Exit();
         }
+
+        private void btHelpSignIn_Click(object sender, EventArgs e)
+        {
+            frmMainAdmin frm = new frmMainAdmin();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

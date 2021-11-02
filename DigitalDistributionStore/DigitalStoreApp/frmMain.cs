@@ -45,7 +45,13 @@ namespace DigitalStoreApp
             ctrlProfile.BringToFront();
         }
 
+        //don't touch it it's dead
         private void orderControl1_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btClose_Click(object sender, System.EventArgs e)
         {
 
         }

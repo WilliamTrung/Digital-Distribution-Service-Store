@@ -51,9 +51,9 @@ namespace DigitalStoreApp
             this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbAvatar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pbAvatar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAvatar.Image = global::DigitalStoreApp.Properties.Resources.icons8_spongebob_squarepants_256;
+            this.pbAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatar.Image")));
             this.pbAvatar.Location = new System.Drawing.Point(95, 105);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(253, 253);
@@ -65,40 +65,42 @@ namespace DigitalStoreApp
             this.lbIDIs.AutoSize = true;
             this.lbIDIs.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbIDIs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbIDIs.Location = new System.Drawing.Point(115, 378);
+            this.lbIDIs.Location = new System.Drawing.Point(60, 26);
             this.lbIDIs.Name = "lbIDIs";
-            this.lbIDIs.Size = new System.Drawing.Size(42, 34);
+            this.lbIDIs.Size = new System.Drawing.Size(57, 34);
             this.lbIDIs.TabIndex = 1;
-            this.lbIDIs.Text = "ID";
+            this.lbIDIs.Text = "ID :";
             // 
             // lbNameIs
             // 
             this.lbNameIs.AutoSize = true;
             this.lbNameIs.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbNameIs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbNameIs.Location = new System.Drawing.Point(53, 44);
+            this.lbNameIs.Location = new System.Drawing.Point(3, 83);
             this.lbNameIs.Name = "lbNameIs";
             this.lbNameIs.Size = new System.Drawing.Size(114, 34);
             this.lbNameIs.TabIndex = 2;
             this.lbNameIs.Text = "Name :";
+            this.lbNameIs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbMemberName
             // 
             this.lbMemberName.AutoSize = true;
             this.lbMemberName.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMemberName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbMemberName.Location = new System.Drawing.Point(204, 44);
+            this.lbMemberName.Location = new System.Drawing.Point(123, 83);
             this.lbMemberName.Name = "lbMemberName";
             this.lbMemberName.Size = new System.Drawing.Size(221, 34);
             this.lbMemberName.TabIndex = 3;
             this.lbMemberName.Text = "Member Name";
+            this.lbMemberName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbID
             // 
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbID.Location = new System.Drawing.Point(163, 378);
+            this.lbID.Location = new System.Drawing.Point(123, 26);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(143, 34);
             this.lbID.TabIndex = 4;
@@ -109,11 +111,12 @@ namespace DigitalStoreApp
             this.lbEmailIs.AutoSize = true;
             this.lbEmailIs.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEmailIs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbEmailIs.Location = new System.Drawing.Point(64, 121);
+            this.lbEmailIs.Location = new System.Drawing.Point(14, 140);
             this.lbEmailIs.Name = "lbEmailIs";
             this.lbEmailIs.Size = new System.Drawing.Size(103, 34);
             this.lbEmailIs.TabIndex = 5;
             this.lbEmailIs.Text = "Email :";
+            this.lbEmailIs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbStatus
             // 
@@ -122,9 +125,9 @@ namespace DigitalStoreApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbStatus.BackColor = System.Drawing.Color.Transparent;
             this.pbStatus.Image = ((System.Drawing.Image)(resources.GetObject("pbStatus.Image")));
-            this.pbStatus.Location = new System.Drawing.Point(609, 0);
+            this.pbStatus.Location = new System.Drawing.Point(591, 0);
             this.pbStatus.Name = "pbStatus";
-            this.pbStatus.Size = new System.Drawing.Size(59, 60);
+            this.pbStatus.Size = new System.Drawing.Size(61, 60);
             this.pbStatus.TabIndex = 7;
             this.pbStatus.TabStop = false;
             // 
@@ -133,24 +136,27 @@ namespace DigitalStoreApp
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbEmail.Location = new System.Drawing.Point(204, 121);
+            this.lbEmail.Location = new System.Drawing.Point(123, 140);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(276, 34);
             this.lbEmail.TabIndex = 8;
             this.lbEmail.Text = "abcabc@abc.com";
+            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnInfo
             // 
             this.pnInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnInfo.Controls.Add(this.label1);
             this.pnInfo.Controls.Add(this.lbEmail);
+            this.pnInfo.Controls.Add(this.lbID);
             this.pnInfo.Controls.Add(this.pbStatus);
+            this.pnInfo.Controls.Add(this.lbIDIs);
             this.pnInfo.Controls.Add(this.lbMemberName);
             this.pnInfo.Controls.Add(this.lbEmailIs);
             this.pnInfo.Controls.Add(this.lbNameIs);
             this.pnInfo.Location = new System.Drawing.Point(375, 105);
             this.pnInfo.Name = "pnInfo";
-            this.pnInfo.Size = new System.Drawing.Size(668, 249);
+            this.pnInfo.Size = new System.Drawing.Size(652, 249);
             this.pnInfo.TabIndex = 10;
             // 
             // label1
@@ -158,7 +164,7 @@ namespace DigitalStoreApp
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(171, 198);
+            this.label1.Location = new System.Drawing.Point(171, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 34);
             this.label1.TabIndex = 9;
@@ -171,9 +177,9 @@ namespace DigitalStoreApp
             this.btEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditProfile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btEditProfile.ForeColor = System.Drawing.Color.White;
-            this.btEditProfile.Location = new System.Drawing.Point(804, 378);
+            this.btEditProfile.Location = new System.Drawing.Point(806, 378);
             this.btEditProfile.Name = "btEditProfile";
-            this.btEditProfile.Size = new System.Drawing.Size(239, 84);
+            this.btEditProfile.Size = new System.Drawing.Size(221, 74);
             this.btEditProfile.TabIndex = 11;
             this.btEditProfile.Text = "EDIT";
             this.btEditProfile.UseVisualStyleBackColor = false;
@@ -184,8 +190,6 @@ namespace DigitalStoreApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btEditProfile);
             this.Controls.Add(this.pnInfo);
-            this.Controls.Add(this.lbID);
-            this.Controls.Add(this.lbIDIs);
             this.Controls.Add(this.pbAvatar);
             this.Name = "ProfileControl";
             this.Size = new System.Drawing.Size(1105, 591);
@@ -194,7 +198,6 @@ namespace DigitalStoreApp
             this.pnInfo.ResumeLayout(false);
             this.pnInfo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
