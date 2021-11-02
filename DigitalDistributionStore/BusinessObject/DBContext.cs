@@ -18,7 +18,7 @@ namespace BusinessObject
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;uid=sa;pwd=sa;database=DigitalStore");
+            optionsBuilder.UseSqlServer("Server=.;uid=sa;pwd=123;database=DigitalStore");
         }
     }
 }
