@@ -20,7 +20,6 @@ namespace DataAccess.Repository
 
         public List<Member> SearchByName(string search) => MemberDAO.SearchByName(search);
 
-
         public void Update(Member member) => MemberDAO.Update(member);
     }
 }
