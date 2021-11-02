@@ -49,5 +49,15 @@ namespace DigitalStoreApp
         {
 
         }
+
+        private void btHelpSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btNewAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

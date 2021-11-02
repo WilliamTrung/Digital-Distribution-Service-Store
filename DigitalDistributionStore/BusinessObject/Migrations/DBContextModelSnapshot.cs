@@ -47,6 +47,9 @@ namespace BusinessObject.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
                     b.Property<string>("MemberName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
