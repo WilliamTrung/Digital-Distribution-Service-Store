@@ -90,7 +90,7 @@ namespace DataAccess
                 throw new Exception(e.Message);
             }
         }
-        public void Close(Order order)
+        public static void Close(Order order)
         {
             try
             {
