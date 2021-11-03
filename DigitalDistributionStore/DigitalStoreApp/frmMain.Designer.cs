@@ -139,11 +139,12 @@ namespace DigitalStoreApp
             this.btClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
             this.btClose.Image = ((System.Drawing.Image)(resources.GetObject("btClose.Image")));
-            this.btClose.Location = new System.Drawing.Point(1296, 16);
+            this.btClose.Location = new System.Drawing.Point(1302, 16);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(60, 58);
+            this.btClose.Size = new System.Drawing.Size(42, 41);
             this.btClose.TabIndex = 3;
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // ctrlProduct
             // 

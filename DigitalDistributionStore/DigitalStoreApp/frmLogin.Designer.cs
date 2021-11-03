@@ -190,6 +190,7 @@ namespace DigitalStoreApp
             // 
             this.txbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.txbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.txbPassword.Location = new System.Drawing.Point(128, 132);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(447, 27);
@@ -257,7 +258,6 @@ namespace DigitalStoreApp
             // btHelpSignIn
             // 
             this.btHelpSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(172)))), ((int)(((byte)(190)))));
-            this.btHelpSignIn.Enabled = false;
             this.btHelpSignIn.FlatAppearance.BorderSize = 0;
             this.btHelpSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHelpSignIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
