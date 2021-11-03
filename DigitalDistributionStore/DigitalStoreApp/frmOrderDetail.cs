@@ -2,9 +2,9 @@
 
 namespace DigitalStoreApp
 {
-    public partial class OrderControl : UserControl
+    public partial class frmOrderDetail : Form
     {
-        public OrderControl()
+        public frmOrderDetail()
         {
             InitializeComponent();
         }
