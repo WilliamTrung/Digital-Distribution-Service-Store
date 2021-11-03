@@ -205,6 +205,7 @@ namespace DigitalStoreApp
             this.btSaveOrder.TabIndex = 4;
             this.btSaveOrder.Text = "Save Order";
             this.btSaveOrder.UseVisualStyleBackColor = false;
+            this.btSaveOrder.Click += new System.EventHandler(this.btSaveOrder_Click);
             // 
             // ProductControl
             // 

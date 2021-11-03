@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{17386D0B-8434-4F70-B52C-E33395238A05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{E4FA38F2-4674-4762-B739-6C3959D1E0A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{E4FA38F2-4674-4762-B739-6C3959D1E0A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalStoreApp", "DigitalStoreApp\DigitalStoreApp.csproj", "{91E7F926-F0F3-4123-BA24-139E1325B45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitalStoreApp", "DigitalStoreApp\DigitalStoreApp.csproj", "{91E7F926-F0F3-4123-BA24-139E1325B45B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
