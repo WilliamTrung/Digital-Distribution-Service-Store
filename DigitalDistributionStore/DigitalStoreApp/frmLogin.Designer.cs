@@ -253,6 +253,7 @@ namespace DigitalStoreApp
             this.btNewAccount.Text = "CREATE A NEW ACCOUNT...";
             this.btNewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNewAccount.UseVisualStyleBackColor = false;
+            this.btNewAccount.Click += new System.EventHandler(this.btNewAccount_Click);
             // 
             // btHelpSignIn
             // 

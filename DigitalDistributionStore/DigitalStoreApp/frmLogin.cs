@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using DataAccess.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,18 @@ namespace DigitalStoreApp
 {
     public partial class frmLogin : Form
     {
+        ISystemHandler app;
+        Member loginUser;
         public frmLogin()
         {
             InitializeComponent();
         }
-
+        
         private void btLogin_Click(object sender, EventArgs e)
         {
             //login info correct
+            loginUser = app.Login(txbName.Text, txbPassword.Text);
+            //end login
             frmMain frm = new frmMain();
             this.Hide();
             frm.ShowDialog();
@@ -39,12 +45,19 @@ namespace DigitalStoreApp
             Application.Exit();
         }
 
+        private void lbEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btHelpSignIn_Click(object sender, EventArgs e)
         {
-            frmMainAdmin frm = new frmMainAdmin();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+
+        }
+
+        private void btNewAccount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

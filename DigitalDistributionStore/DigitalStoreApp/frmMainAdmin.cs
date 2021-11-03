@@ -73,5 +73,10 @@ namespace DigitalStoreApp
             ctrlOrderManagement.Show();
             ctrlOrderManagement.BringToFront();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
