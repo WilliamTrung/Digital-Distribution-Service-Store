@@ -42,4 +42,3 @@ W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributio
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\BusinessObject\obj\Debug\net5.0\ref\BusinessObject.dll
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\BusinessObject\obj\Debug\net5.0\BusinessObject.pdb
 W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\BusinessObject\obj\Debug\net5.0\BusinessObject.genruntimeconfig.cache
-W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\BusinessObject\obj\Debug\net5.0\BusinessObject.csproj.AssemblyReference.cache
