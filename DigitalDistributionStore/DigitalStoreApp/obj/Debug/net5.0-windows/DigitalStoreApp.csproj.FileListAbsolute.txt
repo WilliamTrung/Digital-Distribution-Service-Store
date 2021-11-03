@@ -127,3 +127,7 @@ C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\Digital
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.ProfileControl.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.Properties.Resources.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.csproj.CopyComplete
+W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\bin\Debug\net5.0-windows\Humanizer.dll
+W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.AdminManagementControl.resources
+W:\Schoolwork\WilliamTrung\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.csproj.CopyComplete
