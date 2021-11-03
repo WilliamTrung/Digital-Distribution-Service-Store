@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {}
+    "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {
+    "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Loliizabezt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\obj\\",
+        "projectPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Loliizabezt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
