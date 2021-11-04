@@ -10,8 +10,8 @@ namespace DataAccess.Interface
     public interface IOrder
     {
         public List<Order> GetOrders();
-        public void Insert(Order order);
-        public void Update(Order order);
+        public Order Insert(Order order);
+        public Order Update(Order order);
         public void Delete(Order order);
         public void Close(Order order);
         public List<Order> GetOrdersByDate(DateTime start, DateTime end);

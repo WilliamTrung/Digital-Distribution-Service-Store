@@ -11,6 +11,7 @@ namespace BusinessObject
     public class Category
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.Browsable(false)]
         public int CategoryID { get; set; }
         [Required]
         public string CategoryName { get; set; }

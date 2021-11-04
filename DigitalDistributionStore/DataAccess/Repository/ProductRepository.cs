@@ -18,8 +18,8 @@ namespace DataAccess.Repository
 
         public List<Product> SearchByName(string search) => ProductDAO.SearchByName(search);
 
-        public void SortByCategory(ref List<Product> list)
-        => ProductDAO.SortByCategory(ref list);
+        public List<Product> SortByCategory(List<Product> list)
+        => ProductDAO.SortByCategory(list);
 
         public void Update(Product product) => ProductDAO.Update(product);
     }
