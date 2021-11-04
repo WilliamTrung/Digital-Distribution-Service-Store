@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using DataAccess.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,17 @@ namespace DigitalStoreApp
 {
     public partial class ProfileControl : UserControl
     {
-        public ProfileControl()
+        Member loginUser;
+        ISystemHandler context;
+        public ProfileControl(Member loginUser)
         {
             InitializeComponent();
+            this.loginUser = loginUser;
+        }
+
+        private void btEditProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

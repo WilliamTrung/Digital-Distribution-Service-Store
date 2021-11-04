@@ -55,6 +55,7 @@ namespace DigitalStoreApp
             this.dgvOrder.RowTemplate.Height = 29;
             this.dgvOrder.Size = new System.Drawing.Size(454, 423);
             this.dgvOrder.TabIndex = 3;
+            this.dgvOrder.SelectionChanged += new System.EventHandler(this.dgvOrder_SelectionChanged);
             // 
             // pnOrderAction
             // 
@@ -94,6 +95,7 @@ namespace DigitalStoreApp
             this.btCheckOutOrder.TabIndex = 10;
             this.btCheckOutOrder.Text = "Check Out";
             this.btCheckOutOrder.UseVisualStyleBackColor = false;
+            this.btCheckOutOrder.Click += new System.EventHandler(this.btCheckOutOrder_Click);
             // 
             // dgvOrderDetail
             // 
@@ -179,6 +181,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.dgvOrder);
             this.Name = "OrderControl";
             this.Size = new System.Drawing.Size(1105, 591);
+            this.Load += new System.EventHandler(this.OrderControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.pnOrderAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();

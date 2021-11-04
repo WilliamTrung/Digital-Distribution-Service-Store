@@ -14,5 +14,6 @@ namespace DataAccess.Interface
         public void Update(Product product);
         public void Delete(Product product);
         public List<Product> SearchByName(string search);
+        public void SortByCategory(ref List<Product> list);
     }
 }

@@ -111,5 +111,9 @@ namespace DataAccess
             }
             return list;
         }
+        public static void SortByCategory(ref List<Product> list)
+        {
+            list = list.OrderByDescending(p => p.Category.CategoryName).ToList();
+        }
     }
 }
