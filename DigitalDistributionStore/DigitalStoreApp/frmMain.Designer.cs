@@ -1,4 +1,6 @@
 ﻿
+using BusinessObject;
+
 namespace DigitalStoreApp
 {
     partial class frmMain
@@ -38,8 +40,8 @@ namespace DigitalStoreApp
             this.btProduct = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
-            this.ctrlProduct = new DigitalStoreApp.ProductControl();
-            this.ctrlProfile = new DigitalStoreApp.ProfileControl();
+            this.ctrlProduct = new DigitalStoreApp.ProductControl(loginUser);
+            this.ctrlProfile = new DigitalStoreApp.ProfileControl(loginUser);
             this.ctrlOrder = new DigitalStoreApp.OrderControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +59,7 @@ namespace DigitalStoreApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 715);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnSideBar
             // 
@@ -143,7 +146,7 @@ namespace DigitalStoreApp
             this.btClose.Size = new System.Drawing.Size(42, 41);
             this.btClose.TabIndex = 3;
             this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            //this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // ctrlProduct
             // 

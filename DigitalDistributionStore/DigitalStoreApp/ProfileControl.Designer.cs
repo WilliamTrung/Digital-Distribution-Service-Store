@@ -183,6 +183,7 @@ namespace DigitalStoreApp
             this.btEditProfile.TabIndex = 11;
             this.btEditProfile.Text = "EDIT";
             this.btEditProfile.UseVisualStyleBackColor = false;
+            this.btEditProfile.Click += new System.EventHandler(this.btEditProfile_Click);
             // 
             // ProfileControl
             // 

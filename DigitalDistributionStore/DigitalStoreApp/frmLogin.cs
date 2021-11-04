@@ -19,10 +19,14 @@ namespace DigitalStoreApp
             //login info correct
             loginUser = app.Login(txbName.Text, txbPassword.Text);
             //end login
-            frmMain frm = new frmMain();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            if(loginUser != null)
+            {
+                frmMain frm = new frmMain(loginUser);
+                this.Hide();
+                frm.ShowDialog();
+                this.Show();
+            }
+            
         }
 
         private void btClose_Click(object sender, EventArgs e)

@@ -1,10 +1,14 @@
-﻿using System.Windows.Forms;
+﻿using BusinessObject;
+using DataAccess.Interface;
+using System.Windows.Forms;
 
 namespace DigitalStoreApp
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        Member loginUser;
+        ISystemHandler context;
+        public frmMain(Member loginUser)
         {
             InitializeComponent();
             pnSideBar.Height = btProduct.Height;
@@ -12,7 +16,7 @@ namespace DigitalStoreApp
             ctrlProfile.Hide();
             ctrlProduct.Show();
             ctrlProduct.BringToFront();
-
+            this.loginUser = loginUser;
         }
 
         private void btProduct_Click(object sender, System.EventArgs e)
@@ -45,13 +49,12 @@ namespace DigitalStoreApp
             ctrlProfile.BringToFront();
         }
 
-        //don't touch it it's dead
         private void orderControl1_Load(object sender, System.EventArgs e)
         {
 
         }
 
-        private void btClose_Click(object sender, System.EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

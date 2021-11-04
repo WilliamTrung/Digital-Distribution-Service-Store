@@ -33,7 +33,7 @@ namespace DigitalStoreApp
             this.pnProduct = new System.Windows.Forms.Panel();
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbCategory = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btSortByType = new System.Windows.Forms.Button();
             this.btSortByName = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
             this.tbProductName = new System.Windows.Forms.TextBox();
@@ -68,7 +68,7 @@ namespace DigitalStoreApp
             // 
             this.pnProduct.Controls.Add(this.lbProductName);
             this.pnProduct.Controls.Add(this.lbCategory);
-            this.pnProduct.Controls.Add(this.button2);
+            this.pnProduct.Controls.Add(this.btSortByType);
             this.pnProduct.Controls.Add(this.btSortByName);
             this.pnProduct.Controls.Add(this.btSearch);
             this.pnProduct.Controls.Add(this.tbProductName);
@@ -102,20 +102,20 @@ namespace DigitalStoreApp
             this.lbCategory.TabIndex = 9;
             this.lbCategory.Text = "Category :";
             // 
-            // button2
+            // btSortByType
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 28);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Sort By Type";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btSortByType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.btSortByType.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btSortByType.FlatAppearance.BorderSize = 0;
+            this.btSortByType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSortByType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btSortByType.ForeColor = System.Drawing.Color.White;
+            this.btSortByType.Location = new System.Drawing.Point(0, 87);
+            this.btSortByType.Name = "btSortByType";
+            this.btSortByType.Size = new System.Drawing.Size(196, 28);
+            this.btSortByType.TabIndex = 8;
+            this.btSortByType.Text = "Sort By Type";
+            this.btSortByType.UseVisualStyleBackColor = false;
             // 
             // btSortByName
             // 
@@ -131,6 +131,7 @@ namespace DigitalStoreApp
             this.btSortByName.TabIndex = 7;
             this.btSortByName.Text = "Sort by Name";
             this.btSortByName.UseVisualStyleBackColor = false;
+            this.btSortByName.Click += new System.EventHandler(this.btSortByName_Click);
             // 
             // btSearch
             // 
@@ -155,6 +156,7 @@ namespace DigitalStoreApp
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.Size = new System.Drawing.Size(360, 27);
             this.tbProductName.TabIndex = 5;
+            this.tbProductName.TextChanged += new System.EventHandler(this.tbProductName_TextChanged);
             // 
             // cbCategory
             // 
@@ -281,6 +283,7 @@ namespace DigitalStoreApp
             this.btSaveOrder.TabIndex = 4;
             this.btSaveOrder.Text = "Save Order";
             this.btSaveOrder.UseVisualStyleBackColor = false;
+            this.btSaveOrder.Click += new System.EventHandler(this.btSaveOrder_Click);
             // 
             // ProductControl
             // 
@@ -294,6 +297,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.dgvProduct);
             this.Name = "ProductControl";
             this.Size = new System.Drawing.Size(1105, 591);
+            this.Load += new System.EventHandler(this.ProductControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.pnProduct.ResumeLayout(false);
             this.pnProduct.PerformLayout();
@@ -320,7 +324,7 @@ namespace DigitalStoreApp
         private System.Windows.Forms.Button btRemoveFromOrder;
         private System.Windows.Forms.Button btSaveOrder;
         private System.Windows.Forms.Label lbCategory;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btSortByType;
         private System.Windows.Forms.Button btSortByName;
         private System.Windows.Forms.Label lbProductName;
         private System.Windows.Forms.Button btResetOrder;
