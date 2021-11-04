@@ -42,7 +42,7 @@ namespace DigitalStoreApp
             this.lbCategoryName.AutoSize = true;
             this.lbCategoryName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCategoryName.ForeColor = System.Drawing.Color.White;
-            this.lbCategoryName.Location = new System.Drawing.Point(72, 117);
+            this.lbCategoryName.Location = new System.Drawing.Point(58, 93);
             this.lbCategoryName.Name = "lbCategoryName";
             this.lbCategoryName.Size = new System.Drawing.Size(155, 21);
             this.lbCategoryName.TabIndex = 10;
@@ -53,7 +53,7 @@ namespace DigitalStoreApp
             this.lbCategoryID.AutoSize = true;
             this.lbCategoryID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCategoryID.ForeColor = System.Drawing.Color.White;
-            this.lbCategoryID.Location = new System.Drawing.Point(105, 48);
+            this.lbCategoryID.Location = new System.Drawing.Point(91, 39);
             this.lbCategoryID.Name = "lbCategoryID";
             this.lbCategoryID.Size = new System.Drawing.Size(122, 21);
             this.lbCategoryID.TabIndex = 11;
@@ -65,7 +65,7 @@ namespace DigitalStoreApp
             this.tbProductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbProductName.Enabled = false;
             this.tbProductName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbProductName.Location = new System.Drawing.Point(250, 47);
+            this.tbProductName.Location = new System.Drawing.Point(236, 38);
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.Size = new System.Drawing.Size(360, 27);
             this.tbProductName.TabIndex = 13;
@@ -75,7 +75,7 @@ namespace DigitalStoreApp
             this.txbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txbName.Location = new System.Drawing.Point(250, 116);
+            this.txbName.Location = new System.Drawing.Point(236, 92);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(360, 27);
             this.txbName.TabIndex = 14;
@@ -88,7 +88,7 @@ namespace DigitalStoreApp
             this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btConfirm.ForeColor = System.Drawing.Color.White;
-            this.btConfirm.Location = new System.Drawing.Point(120, 196);
+            this.btConfirm.Location = new System.Drawing.Point(106, 172);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(231, 28);
             this.btConfirm.TabIndex = 15;
@@ -103,7 +103,7 @@ namespace DigitalStoreApp
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btCancel.ForeColor = System.Drawing.Color.White;
-            this.btCancel.Location = new System.Drawing.Point(442, 196);
+            this.btCancel.Location = new System.Drawing.Point(428, 172);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(231, 28);
             this.btCancel.TabIndex = 16;
@@ -115,7 +115,7 @@ namespace DigitalStoreApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(800, 276);
+            this.ClientSize = new System.Drawing.Size(768, 253);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.txbName);
