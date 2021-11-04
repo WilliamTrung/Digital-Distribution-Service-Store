@@ -26,20 +26,29 @@ namespace DataAccess
             }
             return ListOrder;
         }
-        public static void Insert(Order order)
+        public static Order Insert(Order order)
         {
             try
             {
                 using (var context = new DBContext())
                 {
-                    context.Add(order);
+                    var o = new Order()
+                    {
+                        MemberID = order.MemberID,
+                        OrderDate = order.OrderDate,
+                        Status = order.Status
+                    };
+                    context.Orders.Add(o);
                     context.SaveChanges();
+
+                    order.OrderID = o.OrderID;
                 }
             }
             catch (Exception)
             {
                 throw;
             }
+            return order;
         }
         public static void Remove(Order order)
         {
@@ -65,7 +74,7 @@ namespace DataAccess
                 throw;
             }
         }
-        public static void Update(Order order)
+        public static Order Update(Order order)
         {
             try
             {
@@ -89,6 +98,7 @@ namespace DataAccess
             {
                 throw new Exception(e.Message);
             }
+            return order;
         }
         public static void Close(Order order)
         {

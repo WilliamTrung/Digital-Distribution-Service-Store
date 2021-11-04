@@ -11,6 +11,7 @@ namespace BusinessObject
     public class Member
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.Browsable(false)]
         public int MemberID { get; set; }
         [Required]
         public string MemberName { get; set; }

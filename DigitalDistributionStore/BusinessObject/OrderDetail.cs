@@ -11,8 +11,10 @@ namespace BusinessObject
     public class OrderDetail
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [System.ComponentModel.Browsable(false)]
         public int OrderDetailID { get; set; }
         [Required]
+        [System.ComponentModel.Browsable(false)]
         public int OrderID { get; set; }
         [Required]
         public int ProductID { get; set; }
@@ -20,8 +22,9 @@ namespace BusinessObject
         public int Quantity { get; set; }
         [Required]
         public double UnitPrice { get; set; }
-
+        [System.ComponentModel.Browsable(false)]
         public virtual Product Product { get; set; }
+        [System.ComponentModel.Browsable(false)]
         public virtual Order Order { get; set; }
 
     }

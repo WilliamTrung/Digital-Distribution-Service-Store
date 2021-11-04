@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Interface
 {
-    public interface ISystemHandler
+    public class ISystemHandler
     {
+
         public Member Login(string email, string password) => MemberDAO.Login(email, password);
         public IMember Members() => new MemberRepository();
         public ICategory Categories() => new CategoryRepository();

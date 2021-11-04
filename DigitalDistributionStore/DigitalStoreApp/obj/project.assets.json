@@ -1524,6 +1524,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11"
         },
         "compile": {
@@ -1537,7 +1538,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "BusinessObject": "1.0.0"
+          "BusinessObject": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.11"
         },
         "compile": {
           "bin/placeholder/DataAccess.dll": {}
@@ -5835,24 +5837,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Loliizabezt\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\DigitalStoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\DigitalStoreApp.csproj",
       "projectName": "DigitalStoreApp",
-      "projectPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\DigitalStoreApp.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\obj\\",
+      "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\DigitalStoreApp.csproj",
+      "packagesPath": "C:\\Users\\Loliizabezt\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DigitalStoreApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Loliizabezt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5866,11 +5863,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\BusinessObject\\BusinessObject.csproj"
             },
-            "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "W:\\Schoolwork\\WilliamTrung\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Loliizabezt\\Documents\\GitHub\\Digital-Distribution-Service-Store\\DigitalDistributionStore\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -5918,7 +5915,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

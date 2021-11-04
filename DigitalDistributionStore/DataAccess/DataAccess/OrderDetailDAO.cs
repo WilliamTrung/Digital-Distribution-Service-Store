@@ -101,7 +101,14 @@ namespace DataAccess
                     var check = context.OrderDetails.SingleOrDefault(d => d.OrderID == detail.OrderID && d.ProductID == detail.ProductID);
                     if (check == null)
                     {
-                        context.Add(detail);                       
+                        var add = new OrderDetail()
+                        {
+                            OrderID = detail.OrderID,
+                            ProductID = detail.ProductID,
+                            Quantity = detail.Quantity,
+                            UnitPrice = detail.UnitPrice
+                        };
+                        context.Add(add);                       
                     }
                     else
                     {
@@ -110,9 +117,9 @@ namespace DataAccess
                     context.SaveChanges();
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                throw new Exception(ex.Message);
+                throw;
             }
         }
 

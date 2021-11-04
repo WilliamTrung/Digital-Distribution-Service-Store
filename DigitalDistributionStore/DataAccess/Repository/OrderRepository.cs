@@ -22,13 +22,13 @@ namespace DataAccess.Repository
         public List<Order> GetOrdersByDate(DateTime start, DateTime end)
         => OrderDAO.GetOrdersByDate(start, end);
 
-        public void Insert(Order order)
+        public Order Insert(Order order)
         => OrderDAO.Insert(order);
 
         public double TotalOf(Order order)
         => OrderDAO.TotalOf(order);
 
-        public void Update(Order order)
+        public Order Update(Order order)
         => OrderDAO.Update(order);
     }
 }

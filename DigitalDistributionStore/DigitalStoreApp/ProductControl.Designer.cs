@@ -58,9 +58,12 @@ namespace DigitalStoreApp
             this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Location = new System.Drawing.Point(48, 157);
+            this.dgvProduct.MultiSelect = false;
             this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 29;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(513, 416);
             this.dgvProduct.TabIndex = 0;
             // 
@@ -116,6 +119,7 @@ namespace DigitalStoreApp
             this.btSortByType.TabIndex = 8;
             this.btSortByType.Text = "Sort By Type";
             this.btSortByType.UseVisualStyleBackColor = false;
+            this.btSortByType.Click += new System.EventHandler(this.btSortByType_Click);
             // 
             // btSortByName
             // 
@@ -146,6 +150,7 @@ namespace DigitalStoreApp
             this.btSearch.TabIndex = 6;
             this.btSearch.Text = "SEARCH";
             this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // tbProductName
             // 
@@ -198,11 +203,13 @@ namespace DigitalStoreApp
             this.btClear.TabIndex = 2;
             this.btClear.Text = "CLEAR";
             this.btClear.UseVisualStyleBackColor = false;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // dgvOrder
             // 
             this.dgvOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgvOrder.Location = new System.Drawing.Point(578, 157);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
@@ -269,6 +276,7 @@ namespace DigitalStoreApp
             this.btRemoveFromOrder.TabIndex = 5;
             this.btRemoveFromOrder.Text = "Remove from Order";
             this.btRemoveFromOrder.UseVisualStyleBackColor = false;
+            this.btRemoveFromOrder.Click += new System.EventHandler(this.btRemoveFromOrder_Click);
             // 
             // btSaveOrder
             // 
