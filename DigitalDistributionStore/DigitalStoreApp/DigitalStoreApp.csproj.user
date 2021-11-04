@@ -4,6 +4,9 @@
     <Compile Update="AdminManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="frmCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +14,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmMainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmMemberDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmProductDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="OrderControl.cs">
