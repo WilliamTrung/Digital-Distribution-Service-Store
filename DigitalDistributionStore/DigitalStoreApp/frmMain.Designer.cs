@@ -59,7 +59,6 @@ namespace DigitalStoreApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 715);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnSideBar
             // 
@@ -168,7 +167,6 @@ namespace DigitalStoreApp
             this.ctrlOrder.Name = "ctrlOrder";
             this.ctrlOrder.Size = new System.Drawing.Size(1103, 579);
             this.ctrlOrder.TabIndex = 6;
-            this.ctrlOrder.Load += new System.EventHandler(this.orderControl1_Load);
             // 
             // frmMain
             // 

@@ -4,6 +4,9 @@
     <Compile Update="AdminManagementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="frmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmCategoryDetail.cs">
       <SubType>Form</SubType>
     </Compile>

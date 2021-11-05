@@ -49,15 +49,6 @@ namespace DigitalStoreApp
             ctrlProfile.BringToFront();
         }
 
-        private void orderControl1_Load(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 
