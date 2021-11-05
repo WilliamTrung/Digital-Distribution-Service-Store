@@ -22,6 +22,9 @@ namespace DataAccess.Repository
         public void Remove(OrderDetail detail)
         => OrderDetailDAO.Remove(detail);
 
+        public void RemoveAll(Order order)
+        => OrderDetailDAO.RemoveAll(order);
+
         public void Update(OrderDetail detail)
         => OrderDetailDAO.Update(detail);
     }

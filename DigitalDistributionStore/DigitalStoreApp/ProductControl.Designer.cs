@@ -57,6 +57,7 @@ namespace DigitalStoreApp
             // 
             this.dgvProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvProduct.Location = new System.Drawing.Point(48, 157);
             this.dgvProduct.MultiSelect = false;
             this.dgvProduct.Name = "dgvProduct";
@@ -207,15 +208,21 @@ namespace DigitalStoreApp
             // 
             // dgvOrder
             // 
+            this.dgvOrder.AllowUserToOrderColumns = true;
+            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dgvOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dgvOrder.Location = new System.Drawing.Point(578, 157);
+            this.dgvOrder.MultiSelect = false;
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 29;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(481, 311);
             this.dgvOrder.TabIndex = 2;
+            this.dgvOrder.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellValidated);
+            this.dgvOrder.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvOrder_DataError);
             // 
             // lbProducList
             // 
@@ -262,6 +269,7 @@ namespace DigitalStoreApp
             this.btResetOrder.TabIndex = 6;
             this.btResetOrder.Text = "Reset Order";
             this.btResetOrder.UseVisualStyleBackColor = false;
+            this.btResetOrder.Click += new System.EventHandler(this.btResetOrder_Click);
             // 
             // btRemoveFromOrder
             // 

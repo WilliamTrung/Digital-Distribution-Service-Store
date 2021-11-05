@@ -17,7 +17,7 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    listProducts = context.Products.ToList();
+                    listProducts = context.Products.Include(p => p.Category).ToList();
                 }
             }
             catch (Exception e)

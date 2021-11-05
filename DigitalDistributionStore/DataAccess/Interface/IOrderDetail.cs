@@ -14,6 +14,6 @@ namespace DataAccess.Interface
         public void Insert(OrderDetail detail);
         public void Update(OrderDetail detail);
         public void Remove(OrderDetail detail);
-        
+        public void RemoveAll(Order order);
     }
 }

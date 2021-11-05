@@ -39,10 +39,10 @@ namespace DataAccess
                     }
                     else
                     {
-                        var check = context.OrderDetails.SingleOrDefault(d => d.OrderID == detail.OrderID);
+                        var check = context.OrderDetails.SingleOrDefault(d => d.OrderID == detail.OrderID && d.ProductID == detail.ProductID);
                         if (check != null)
                         {
-                            context.Remove(detail);
+                            context.Remove(check);
                             context.SaveChanges();
                         }
                         else
@@ -50,6 +50,36 @@ namespace DataAccess
                             throw new Exception("This detail is not found!");
                         }
                     }                  
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static void RemoveAll(Order order)
+        {
+            try
+            {
+                using (var context = new DBContext())
+                {
+                    if (order.Status == false)
+                    {
+                        throw new Exception("This order has ended! Cannot be removed!");
+                    }
+                    else
+                    {
+                        var check = context.OrderDetails.Where(d => d.OrderID == order.OrderID).ToList().Count;
+                        if (check > 0)
+                        {
+                            context.OrderDetails.RemoveRange(context.OrderDetails.Where(d => d.OrderID == order.OrderID));
+                            context.SaveChanges();
+                        }
+                        else
+                        {
+                            throw new Exception("These details are not found!");
+                        }
+                    }
                 }
             }
             catch (Exception)
@@ -112,7 +142,14 @@ namespace DataAccess
                     }
                     else
                     {
-                        context.Entry<OrderDetail>(detail).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        int quantity = check.Quantity;
+                        int inStock = context.Products.Find(check.ProductID).UnitsInStock;
+                        if(quantity > inStock)
+                        {
+                            throw new Exception("Maximum amount reached!");
+                        }
+                        check.Quantity = quantity + 1;
+                        context.Entry<OrderDetail>(check).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                     }
                     context.SaveChanges();
                 }
