@@ -42,7 +42,7 @@ namespace DigitalStoreApp
             this.btClose = new System.Windows.Forms.Button();
             this.ctrlProduct = new DigitalStoreApp.ProductControl(loginUser);
             this.ctrlProfile = new DigitalStoreApp.ProfileControl(loginUser);
-            this.ctrlOrder = new DigitalStoreApp.OrderControl();
+            this.ctrlOrder = new DigitalStoreApp.OrderControl(loginUser);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 

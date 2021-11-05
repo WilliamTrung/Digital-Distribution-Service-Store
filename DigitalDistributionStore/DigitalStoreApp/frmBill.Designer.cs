@@ -31,23 +31,23 @@ namespace DigitalStoreApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBill));
             this.dgvDetail = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnBill = new System.Windows.Forms.Panel();
+            this.lbDateInfo = new System.Windows.Forms.Label();
+            this.lbEmployeeIDInfo = new System.Windows.Forms.Label();
+            this.lbOrderIDInfo = new System.Windows.Forms.Label();
+            this.lbLogo = new System.Windows.Forms.Label();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.lb1 = new System.Windows.Forms.Label();
+            this.lb2 = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.lbOrderID = new System.Windows.Forms.Label();
             this.lbOrderName = new System.Windows.Forms.Label();
             this.lb3 = new System.Windows.Forms.Label();
-            this.lb2 = new System.Windows.Forms.Label();
-            this.lb1 = new System.Windows.Forms.Label();
-            this.lbLogo = new System.Windows.Forms.Label();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.lb4 = new System.Windows.Forms.Label();
-            this.lbOrderIDInfo = new System.Windows.Forms.Label();
-            this.lbEmployeeIDInfo = new System.Windows.Forms.Label();
-            this.lbDateInfo = new System.Windows.Forms.Label();
             this.lbTotalMoney = new System.Windows.Forms.Label();
             this.lbUSD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,23 +63,99 @@ namespace DigitalStoreApp
             this.dgvDetail.Size = new System.Drawing.Size(586, 364);
             this.dgvDetail.TabIndex = 26;
             // 
-            // panel1
+            // pnBill
             // 
-            this.panel1.Controls.Add(this.lbDateInfo);
-            this.panel1.Controls.Add(this.lbEmployeeIDInfo);
-            this.panel1.Controls.Add(this.lbOrderIDInfo);
-            this.panel1.Controls.Add(this.lbLogo);
-            this.panel1.Controls.Add(this.ptbLogo);
-            this.panel1.Controls.Add(this.lb1);
-            this.panel1.Controls.Add(this.lb2);
-            this.panel1.Controls.Add(this.lbDate);
-            this.panel1.Controls.Add(this.lbOrderID);
-            this.panel1.Controls.Add(this.lbOrderName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 188);
-            this.panel1.TabIndex = 28;
+            this.pnBill.Controls.Add(this.lbDateInfo);
+            this.pnBill.Controls.Add(this.lbEmployeeIDInfo);
+            this.pnBill.Controls.Add(this.lbOrderIDInfo);
+            this.pnBill.Controls.Add(this.lbLogo);
+            this.pnBill.Controls.Add(this.ptbLogo);
+            this.pnBill.Controls.Add(this.lb1);
+            this.pnBill.Controls.Add(this.lb2);
+            this.pnBill.Controls.Add(this.lbDate);
+            this.pnBill.Controls.Add(this.lbOrderID);
+            this.pnBill.Controls.Add(this.lbOrderName);
+            this.pnBill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnBill.Location = new System.Drawing.Point(0, 0);
+            this.pnBill.Name = "pnBill";
+            this.pnBill.Size = new System.Drawing.Size(584, 188);
+            this.pnBill.TabIndex = 28;
+            // 
+            // lbDateInfo
+            // 
+            this.lbDateInfo.AutoSize = true;
+            this.lbDateInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbDateInfo.ForeColor = System.Drawing.Color.White;
+            this.lbDateInfo.Location = new System.Drawing.Point(121, 122);
+            this.lbDateInfo.Name = "lbDateInfo";
+            this.lbDateInfo.Size = new System.Drawing.Size(87, 20);
+            this.lbDateInfo.TabIndex = 34;
+            this.lbDateInfo.Text = "00/00/0000";
+            // 
+            // lbEmployeeIDInfo
+            // 
+            this.lbEmployeeIDInfo.AutoSize = true;
+            this.lbEmployeeIDInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbEmployeeIDInfo.ForeColor = System.Drawing.Color.White;
+            this.lbEmployeeIDInfo.Location = new System.Drawing.Point(177, 87);
+            this.lbEmployeeIDInfo.Name = "lbEmployeeIDInfo";
+            this.lbEmployeeIDInfo.Size = new System.Drawing.Size(44, 20);
+            this.lbEmployeeIDInfo.TabIndex = 33;
+            this.lbEmployeeIDInfo.Text = "xxxxx";
+            // 
+            // lbOrderIDInfo
+            // 
+            this.lbOrderIDInfo.AutoSize = true;
+            this.lbOrderIDInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbOrderIDInfo.ForeColor = System.Drawing.Color.White;
+            this.lbOrderIDInfo.Location = new System.Drawing.Point(148, 52);
+            this.lbOrderIDInfo.Name = "lbOrderIDInfo";
+            this.lbOrderIDInfo.Size = new System.Drawing.Size(37, 20);
+            this.lbOrderIDInfo.TabIndex = 32;
+            this.lbOrderIDInfo.Text = "xxxx";
+            // 
+            // lbLogo
+            // 
+            this.lbLogo.AutoSize = true;
+            this.lbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.lbLogo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbLogo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbLogo.Location = new System.Drawing.Point(449, 9);
+            this.lbLogo.Name = "lbLogo";
+            this.lbLogo.Size = new System.Drawing.Size(109, 37);
+            this.lbLogo.TabIndex = 30;
+            this.lbLogo.Text = "eStore";
+            // 
+            // ptbLogo
+            // 
+            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
+            this.ptbLogo.Location = new System.Drawing.Point(483, 45);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(65, 67);
+            this.ptbLogo.TabIndex = 31;
+            this.ptbLogo.TabStop = false;
+            // 
+            // lb1
+            // 
+            this.lb1.AutoSize = true;
+            this.lb1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb1.ForeColor = System.Drawing.Color.White;
+            this.lb1.Location = new System.Drawing.Point(32, 155);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(182, 22);
+            this.lb1.TabIndex = 29;
+            this.lb1.Text = "Item(s) purchased :";
+            // 
+            // lb2
+            // 
+            this.lb2.AutoSize = true;
+            this.lb2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb2.ForeColor = System.Drawing.Color.White;
+            this.lb2.Location = new System.Drawing.Point(32, 22);
+            this.lb2.Name = "lb2";
+            this.lb2.Size = new System.Drawing.Size(166, 22);
+            this.lb2.TabIndex = 28;
+            this.lb2.Text = "Order Information";
             // 
             // lbDate
             // 
@@ -127,49 +203,6 @@ namespace DigitalStoreApp
             this.lb3.TabIndex = 27;
             this.lb3.Text = "Total :";
             // 
-            // lb2
-            // 
-            this.lb2.AutoSize = true;
-            this.lb2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb2.ForeColor = System.Drawing.Color.White;
-            this.lb2.Location = new System.Drawing.Point(32, 22);
-            this.lb2.Name = "lb2";
-            this.lb2.Size = new System.Drawing.Size(166, 22);
-            this.lb2.TabIndex = 28;
-            this.lb2.Text = "Order Information";
-            // 
-            // lb1
-            // 
-            this.lb1.AutoSize = true;
-            this.lb1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb1.ForeColor = System.Drawing.Color.White;
-            this.lb1.Location = new System.Drawing.Point(32, 155);
-            this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(182, 22);
-            this.lb1.TabIndex = 29;
-            this.lb1.Text = "Item(s) purchased :";
-            // 
-            // lbLogo
-            // 
-            this.lbLogo.AutoSize = true;
-            this.lbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbLogo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbLogo.Location = new System.Drawing.Point(449, 9);
-            this.lbLogo.Name = "lbLogo";
-            this.lbLogo.Size = new System.Drawing.Size(109, 37);
-            this.lbLogo.TabIndex = 30;
-            this.lbLogo.Text = "eStore";
-            // 
-            // ptbLogo
-            // 
-            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.Location = new System.Drawing.Point(483, 45);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(65, 67);
-            this.ptbLogo.TabIndex = 31;
-            this.ptbLogo.TabStop = false;
-            // 
             // lb4
             // 
             this.lb4.AutoSize = true;
@@ -181,39 +214,6 @@ namespace DigitalStoreApp
             this.lb4.Size = new System.Drawing.Size(154, 21);
             this.lb4.TabIndex = 29;
             this.lb4.Text = "Thanks for buying!";
-            // 
-            // lbOrderIDInfo
-            // 
-            this.lbOrderIDInfo.AutoSize = true;
-            this.lbOrderIDInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbOrderIDInfo.ForeColor = System.Drawing.Color.White;
-            this.lbOrderIDInfo.Location = new System.Drawing.Point(148, 52);
-            this.lbOrderIDInfo.Name = "lbOrderIDInfo";
-            this.lbOrderIDInfo.Size = new System.Drawing.Size(37, 20);
-            this.lbOrderIDInfo.TabIndex = 32;
-            this.lbOrderIDInfo.Text = "xxxx";
-            // 
-            // lbEmployeeIDInfo
-            // 
-            this.lbEmployeeIDInfo.AutoSize = true;
-            this.lbEmployeeIDInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmployeeIDInfo.ForeColor = System.Drawing.Color.White;
-            this.lbEmployeeIDInfo.Location = new System.Drawing.Point(177, 87);
-            this.lbEmployeeIDInfo.Name = "lbEmployeeIDInfo";
-            this.lbEmployeeIDInfo.Size = new System.Drawing.Size(44, 20);
-            this.lbEmployeeIDInfo.TabIndex = 33;
-            this.lbEmployeeIDInfo.Text = "xxxxx";
-            // 
-            // lbDateInfo
-            // 
-            this.lbDateInfo.AutoSize = true;
-            this.lbDateInfo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDateInfo.ForeColor = System.Drawing.Color.White;
-            this.lbDateInfo.Location = new System.Drawing.Point(121, 122);
-            this.lbDateInfo.Name = "lbDateInfo";
-            this.lbDateInfo.Size = new System.Drawing.Size(87, 20);
-            this.lbDateInfo.TabIndex = 34;
-            this.lbDateInfo.Text = "00/00/0000";
             // 
             // lbTotalMoney
             // 
@@ -247,15 +247,16 @@ namespace DigitalStoreApp
             this.Controls.Add(this.lbUSD);
             this.Controls.Add(this.lbTotalMoney);
             this.Controls.Add(this.lb4);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnBill);
             this.Controls.Add(this.lb3);
             this.Controls.Add(this.dgvDetail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBill";
             this.Text = "frmBill";
+            this.Load += new System.EventHandler(this.frmBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnBill.ResumeLayout(false);
+            this.pnBill.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +266,7 @@ namespace DigitalStoreApp
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDetail;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnBill;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Label lbDate;

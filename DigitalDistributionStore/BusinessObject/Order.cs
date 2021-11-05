@@ -11,7 +11,6 @@ namespace BusinessObject
     public class Order
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [System.ComponentModel.Browsable(false)]
         public int OrderID { get; set; }
         [Required]
         public DateTime OrderDate { get; set; }

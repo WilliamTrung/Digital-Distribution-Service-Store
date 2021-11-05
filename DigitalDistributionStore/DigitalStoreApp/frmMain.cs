@@ -1,12 +1,14 @@
 ﻿using BusinessObject;
 using DataAccess.Interface;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DigitalStoreApp
 {
     public partial class frmMain : Form
     {
-        Member loginUser;
+        static DBContext db = new DBContext();
+        Member loginUser= db.Members.SingleOrDefault(m => m.Email == "test@");
         ISystemHandler context;
         public frmMain(Member loginUser)
         {
