@@ -10,16 +10,23 @@ namespace DigitalStoreApp
             InitializeComponent();
             pnSideBar.Height = btCategory.Height;
             pnSideBar.Top = btCategory.Top;
+
+            ctrlCategoryManagement.SetControlView(1);
+            ctrlMemberManagement.SetControlView(3);
+            ctrlProductManagement.SetControlView(2);
+            ctrlOrderManagement.SetControlView(4);
+
+            ctrlCategoryManagement.LoadControlView();
+            ctrlMemberManagement.LoadControlView();
+            ctrlOrderManagement.LoadControlView();
+            ctrlProductManagement.LoadControlView();
+
             ctrlMemberManagement.Hide();
             ctrlProductManagement.Hide();
             ctrlMemberManagement.Hide();
             ctrlCategoryManagement.Show();
             ctrlCategoryManagement.BringToFront();
-        }
 
-        //don't touch this
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -67,9 +74,17 @@ namespace DigitalStoreApp
             ctrlOrderManagement.BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //code for this
+        private void btClose_Click(object sender, EventArgs e)
         {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
 
+        }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
         }
     }
 }
