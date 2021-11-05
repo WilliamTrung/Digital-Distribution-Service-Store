@@ -128,3 +128,7 @@ C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\Digital
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.Properties.Resources.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.csproj.CopyComplete
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.AdminManagementControl.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmCategoryDetail.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmMemberDetail.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmOrderDetail.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmProductDetail.resources
