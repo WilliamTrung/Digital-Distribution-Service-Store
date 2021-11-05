@@ -194,6 +194,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.pbAvatar);
             this.Name = "ProfileControl";
             this.Size = new System.Drawing.Size(1105, 591);
+            this.Load += new System.EventHandler(this.ProfileControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
             this.pnInfo.ResumeLayout(false);

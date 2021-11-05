@@ -133,6 +133,7 @@ namespace DigitalStoreApp
             // 
             this.btCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
             this.btCancel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancel.FlatAppearance.BorderSize = 0;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -143,11 +144,13 @@ namespace DigitalStoreApp
             this.btCancel.TabIndex = 37;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btConfirm
             // 
             this.btConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
             this.btConfirm.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btConfirm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btConfirm.FlatAppearance.BorderSize = 0;
             this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -158,6 +161,7 @@ namespace DigitalStoreApp
             this.btConfirm.TabIndex = 36;
             this.btConfirm.Text = "Confirm";
             this.btConfirm.UseVisualStyleBackColor = false;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // frmMemberDetail
             // 
@@ -178,6 +182,7 @@ namespace DigitalStoreApp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMemberDetail";
             this.Text = "frmMemberDetail";
+            this.Load += new System.EventHandler(this.frmMemberDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
