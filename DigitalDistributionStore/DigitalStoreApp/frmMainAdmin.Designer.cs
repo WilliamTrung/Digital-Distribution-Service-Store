@@ -33,7 +33,7 @@ namespace DigitalStoreApp
             this.pnMenu = new System.Windows.Forms.Panel();
             this.btOrder = new System.Windows.Forms.Button();
             this.pnSideBar = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btLogout = new System.Windows.Forms.Button();
             this.btProduct = new System.Windows.Forms.Button();
             this.btMember = new System.Windows.Forms.Button();
             this.btCategory = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@ namespace DigitalStoreApp
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(43)))));
             this.pnMenu.Controls.Add(this.btOrder);
             this.pnMenu.Controls.Add(this.pnSideBar);
-            this.pnMenu.Controls.Add(this.button4);
+            this.pnMenu.Controls.Add(this.btLogout);
             this.pnMenu.Controls.Add(this.btProduct);
             this.pnMenu.Controls.Add(this.btMember);
             this.pnMenu.Controls.Add(this.btCategory);
@@ -69,9 +69,9 @@ namespace DigitalStoreApp
             this.btOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btOrder.Location = new System.Drawing.Point(12, 392);
+            this.btOrder.Location = new System.Drawing.Point(21, 388);
             this.btOrder.Name = "btOrder";
-            this.btOrder.Size = new System.Drawing.Size(233, 84);
+            this.btOrder.Size = new System.Drawing.Size(224, 84);
             this.btOrder.TabIndex = 4;
             this.btOrder.Text = "Orders";
             this.btOrder.UseVisualStyleBackColor = true;
@@ -80,24 +80,24 @@ namespace DigitalStoreApp
             // pnSideBar
             // 
             this.pnSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.pnSideBar.Location = new System.Drawing.Point(3, 122);
+            this.pnSideBar.Location = new System.Drawing.Point(0, 122);
             this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(16, 84);
+            this.pnSideBar.Size = new System.Drawing.Size(22, 84);
             this.pnSideBar.TabIndex = 1;
-            this.pnSideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button4
+            // btLogout
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.button4.Location = new System.Drawing.Point(3, 631);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(245, 84);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btLogout.FlatAppearance.BorderSize = 0;
+            this.btLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.btLogout.Location = new System.Drawing.Point(0, 631);
+            this.btLogout.Name = "btLogout";
+            this.btLogout.Size = new System.Drawing.Size(245, 84);
+            this.btLogout.TabIndex = 3;
+            this.btLogout.Text = "Logout";
+            this.btLogout.UseVisualStyleBackColor = true;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
             // btProduct
             // 
@@ -105,9 +105,9 @@ namespace DigitalStoreApp
             this.btProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btProduct.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btProduct.Location = new System.Drawing.Point(12, 212);
+            this.btProduct.Location = new System.Drawing.Point(21, 210);
             this.btProduct.Name = "btProduct";
-            this.btProduct.Size = new System.Drawing.Size(233, 84);
+            this.btProduct.Size = new System.Drawing.Size(224, 84);
             this.btProduct.TabIndex = 2;
             this.btProduct.Text = "Products";
             this.btProduct.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@ namespace DigitalStoreApp
             this.btMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMember.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btMember.Location = new System.Drawing.Point(12, 302);
+            this.btMember.Location = new System.Drawing.Point(21, 298);
             this.btMember.Name = "btMember";
-            this.btMember.Size = new System.Drawing.Size(233, 84);
+            this.btMember.Size = new System.Drawing.Size(224, 84);
             this.btMember.TabIndex = 1;
             this.btMember.Text = "Members";
             this.btMember.UseVisualStyleBackColor = true;
@@ -133,9 +133,9 @@ namespace DigitalStoreApp
             this.btCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btCategory.Location = new System.Drawing.Point(12, 122);
+            this.btCategory.Location = new System.Drawing.Point(21, 122);
             this.btCategory.Name = "btCategory";
-            this.btCategory.Size = new System.Drawing.Size(233, 84);
+            this.btCategory.Size = new System.Drawing.Size(224, 84);
             this.btCategory.TabIndex = 0;
             this.btCategory.Text = "Category";
             this.btCategory.UseVisualStyleBackColor = true;
@@ -162,6 +162,7 @@ namespace DigitalStoreApp
             this.btClose.Size = new System.Drawing.Size(46, 46);
             this.btClose.TabIndex = 4;
             this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // pnMain
             // 
@@ -226,7 +227,7 @@ namespace DigitalStoreApp
 
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Panel pnSideBar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btLogout;
         private System.Windows.Forms.Button btProduct;
         private System.Windows.Forms.Button btMember;
         private System.Windows.Forms.Button btCategory;
