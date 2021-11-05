@@ -110,8 +110,8 @@ namespace DataAccess
                     //status == true  => order can still be updated
                     if (check.Status == true)
                     {
-                        order.Status = false;
-                        context.Entry<Order>(order).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        check.Status = false;
+                        context.Entry<Order>(check).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                         context.SaveChanges();
                     }
                     else
