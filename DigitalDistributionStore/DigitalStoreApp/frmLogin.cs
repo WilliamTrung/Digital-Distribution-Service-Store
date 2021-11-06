@@ -12,6 +12,7 @@ namespace DigitalStoreApp
         public frmLogin()
         {
             InitializeComponent();
+            app = new ISystemHandler();
         }
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -19,24 +20,32 @@ namespace DigitalStoreApp
             //login info correct
             loginUser = app.Login(txbName.Text, txbPassword.Text);
             //end login
-            if (loginUser != null)
+            if(loginUser != null)
             {
-                if (loginUser.IsAdmin)
+                if (loginUser.Status)
                 {
-                    frmMainAdmin frmMainAdmin = new frmMainAdmin(loginUser);
-                    this.Hide();
-                    frmMainAdmin.ShowDialog();
-                    this.Show();
+                    if (loginUser.IsAdmin)
+                    {
+                        frmMainAdmin frm = new frmMainAdmin(loginUser);
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        frmMain frm = new frmMain(loginUser);
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Show();
+                    }
                 }
                 else
                 {
-                    frmMain frmMain = new frmMain(loginUser);
-                    this.Hide();
-                    frmMain.ShowDialog();
-                    this.Show();
+                    MessageBox.Show("You are not allowed to log in!", "Warning");
                 }
+                
             }
-
+            
         }
 
         private void btClose_Click(object sender, EventArgs e)
