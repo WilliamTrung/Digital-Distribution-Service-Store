@@ -43,15 +43,9 @@ namespace DigitalStoreApp
             this.lbName = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbNewAccount = new System.Windows.Forms.Label();
-            this.lbSignIn = new System.Windows.Forms.Label();
-            this.btNewAccount = new System.Windows.Forms.Button();
-            this.btHelpSignIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +103,7 @@ namespace DigitalStoreApp
             this.panel2.Controls.Add(this.lbName);
             this.panel2.Controls.Add(this.txbPassword);
             this.panel2.Controls.Add(this.txbName);
-            this.panel2.Location = new System.Drawing.Point(38, 37);
+            this.panel2.Location = new System.Drawing.Point(34, 43);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(575, 231);
             this.panel2.TabIndex = 0;
@@ -207,69 +201,6 @@ namespace DigitalStoreApp
             this.txbName.Size = new System.Drawing.Size(447, 27);
             this.txbName.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbNewAccount);
-            this.panel3.Controls.Add(this.lbSignIn);
-            this.panel3.Controls.Add(this.btNewAccount);
-            this.panel3.Controls.Add(this.btHelpSignIn);
-            this.panel3.Location = new System.Drawing.Point(38, 274);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(575, 109);
-            this.panel3.TabIndex = 0;
-            // 
-            // lbNewAccount
-            // 
-            this.lbNewAccount.AutoSize = true;
-            this.lbNewAccount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbNewAccount.ForeColor = System.Drawing.Color.White;
-            this.lbNewAccount.Location = new System.Drawing.Point(32, 67);
-            this.lbNewAccount.Name = "lbNewAccount";
-            this.lbNewAccount.Size = new System.Drawing.Size(221, 20);
-            this.lbNewAccount.TabIndex = 8;
-            this.lbNewAccount.Text = "Don\'t have a Store account?";
-            // 
-            // lbSignIn
-            // 
-            this.lbSignIn.AutoSize = true;
-            this.lbSignIn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbSignIn.ForeColor = System.Drawing.Color.White;
-            this.lbSignIn.Location = new System.Drawing.Point(88, 23);
-            this.lbSignIn.Name = "lbSignIn";
-            this.lbSignIn.Size = new System.Drawing.Size(165, 20);
-            this.lbSignIn.TabIndex = 7;
-            this.lbSignIn.Text = "Need help signing in?";
-            // 
-            // btNewAccount
-            // 
-            this.btNewAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(172)))), ((int)(((byte)(190)))));
-            this.btNewAccount.FlatAppearance.BorderSize = 0;
-            this.btNewAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNewAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btNewAccount.Location = new System.Drawing.Point(259, 63);
-            this.btNewAccount.Name = "btNewAccount";
-            this.btNewAccount.Size = new System.Drawing.Size(316, 29);
-            this.btNewAccount.TabIndex = 6;
-            this.btNewAccount.Text = "CREATE A NEW ACCOUNT...";
-            this.btNewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNewAccount.UseVisualStyleBackColor = false;
-            this.btNewAccount.Click += new System.EventHandler(this.btNewAccount_Click);
-            // 
-            // btHelpSignIn
-            // 
-            this.btHelpSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(172)))), ((int)(((byte)(190)))));
-            this.btHelpSignIn.FlatAppearance.BorderSize = 0;
-            this.btHelpSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHelpSignIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btHelpSignIn.Location = new System.Drawing.Point(259, 19);
-            this.btHelpSignIn.Name = "btHelpSignIn";
-            this.btHelpSignIn.Size = new System.Drawing.Size(316, 29);
-            this.btHelpSignIn.TabIndex = 5;
-            this.btHelpSignIn.Text = "I CAN\'T SIGN IN... ";
-            this.btHelpSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHelpSignIn.UseVisualStyleBackColor = false;
-            this.btHelpSignIn.Click += new System.EventHandler(this.btHelpSignIn_Click);
-            // 
             // frmLogin
             // 
             this.AcceptButton = this.btLogin;
@@ -278,9 +209,8 @@ namespace DigitalStoreApp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CancelButton = this.btCancel;
-            this.ClientSize = new System.Drawing.Size(655, 409);
+            this.ClientSize = new System.Drawing.Size(655, 285);
             this.ControlBox = false;
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -292,8 +222,6 @@ namespace DigitalStoreApp
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -311,11 +239,6 @@ namespace DigitalStoreApp
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.TextBox txbName;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbNewAccount;
-        private System.Windows.Forms.Label lbSignIn;
-        private System.Windows.Forms.Button btNewAccount;
-        private System.Windows.Forms.Button btHelpSignIn;
         private System.Windows.Forms.Label lbLogo;
         private System.Windows.Forms.PictureBox ptbLogo;
     }

@@ -49,8 +49,6 @@ namespace DigitalStoreApp
             this.pnMenu.SuspendLayout();
             this.pnMain.SuspendLayout();
             this.SuspendLayout();
-            //edit
-            
             // 
             // pnMenu
             // 
@@ -220,6 +218,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMainAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainAdmin";
             this.pnMenu.ResumeLayout(false);
             this.pnMain.ResumeLayout(false);

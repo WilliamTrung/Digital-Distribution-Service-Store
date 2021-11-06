@@ -7,18 +7,21 @@ namespace DigitalStoreApp
 {
     public partial class frmMain : Form
     {
-        static DBContext db = new DBContext();
-        Member loginUser = db.Members.SingleOrDefault(m => m.Email == "test@");
-        ISystemHandler context;
+        Member loginUser;
         public frmMain(Member loginUser)
         {
+            this.loginUser = loginUser;
             InitializeComponent();
             pnSideBar.Height = btProduct.Height;
             pnSideBar.Top = btProduct.Top;
             ctrlProfile.Hide();
             ctrlProduct.Show();
             ctrlProduct.BringToFront();
-            this.loginUser = loginUser;
+           
+
+            ctrlOrder.loginUser = loginUser;
+            ctrlProduct.loginUser = loginUser;
+            ctrlProfile.loginUser = loginUser;
         }
 
         private void btProduct_Click(object sender, System.EventArgs e)
@@ -52,6 +55,60 @@ namespace DigitalStoreApp
         }
 
         private void btClose_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
+
+        private void ctrlOrder_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btClose_Click_1(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        
+
+        private void btLogout_Click_1(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void btLogout_Click(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void btClose_Click_2(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void btLogout_Click_2(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void btLogout_Click_3(object sender, System.EventArgs e)
+        {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
+        }
+
+        private void btLogout_Click_4(object sender, System.EventArgs e)
         {
 
         }

@@ -16,29 +16,26 @@ namespace DigitalStoreApp
     public partial class OrderControl : UserControl
     {
         ISystemHandler context;
+        DBContext db;
         public Member loginUser { get; set; }
-        OrderRepository orderRepository = new OrderRepository();
-        OrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         Order order;
         public OrderControl()
         {
             InitializeComponent();
             //this.loginUser = loginUser;
             context = new ISystemHandler();
+            db = new DBContext();
         }
 
         private void OrderControl_Load(object sender, EventArgs e)
         {
             btCheckOutOrder.Enabled = false;
-            btSortByDate.Enabled = false;
-            btSortbyTime.Enabled = false;
+            btReload.Enabled = false;
             if (loginUser != null)
             {
-                var orderList= orderRepository.GetOrders();
-                List<Order> orderListByMember = orderList.Where(p => p.MemberID == loginUser.MemberID && p.Status==false).ToList();
+                List<Order> orderListByMember = db.Orders.Where(o => o.MemberID == loginUser.MemberID && o.Status==false).ToList();
                 LoadListOrder(orderListByMember);
-                btSortByDate.Enabled = true;
-                btSortbyTime.Enabled = true;
+                btReload.Enabled = true;
             }
         }
         public void LoadListOrder(IEnumerable<Order> orders)
@@ -51,7 +48,7 @@ namespace DigitalStoreApp
                                  order.OrderID,
                                  Name = member.MemberName,
                                  Date = order.OrderDate
-                             }).ToList();
+                             }).OrderBy(o => o.Date).ToList();
             dgvOrder.DataSource = queryList;
             dgvOrder.Refresh();
         }
@@ -61,17 +58,18 @@ namespace DigitalStoreApp
             {
                 int OrderId = Convert.ToInt32(dgvOrder.SelectedRows[0].Cells[0].Value.ToString());
                 {
-                    Order order = orderRepository.GetOrders().SingleOrDefault(p => p.OrderID == OrderId);
+                    Order order = context.Orders().GetOrders().SingleOrDefault(p => p.OrderID == OrderId);
                     if (order != null)
                     {
-                        var orderDetails = orderDetailRepository.GetOrderDetailsByOrder(order);
-                        LoadListOrderDetails(orderDetails);
+                        var orderDetails = context.OrderDetails().GetOrderDetailsByOrder(order);
+                        //LoadListOrderDetails(orderDetails);
                         btCheckOutOrder.Enabled = true;
                         this.order = order;
                     }
                 }
             }
         }
+        /*
         public void LoadListOrderDetails(IEnumerable<OrderDetail> orderDetails)
         {
             var queryList = (from orderDetail in orderDetails
@@ -90,7 +88,7 @@ namespace DigitalStoreApp
             dgvOrderDetail.DataSource = queryList;
             dgvOrderDetail.Refresh();
         }
-
+        */
         private void btCheckOutOrder_Click(object sender, EventArgs e)
         {
             if (order != null)
@@ -101,6 +99,13 @@ namespace DigitalStoreApp
                 };
                 frmBill.Show();
             }
+        }
+
+
+        private void btReload_Click(object sender, EventArgs e)
+        {
+            List<Order> orderListByMember = db.Orders.Where(o => o.MemberID == loginUser.MemberID && o.Status == false).ToList();
+            LoadListOrder(orderListByMember);
         }
     }
 }

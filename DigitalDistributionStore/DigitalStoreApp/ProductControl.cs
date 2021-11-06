@@ -14,11 +14,13 @@ namespace DigitalStoreApp
 {
     public partial class ProductControl : UserControl
     {
-        Member loginUser;
+        public Member loginUser;
         ISystemHandler context;
         List<Product> products;
         Order order;
         DBContext db;
+        Boolean bug = false;
+
         private class Detail {
             public int ProductID { get; set; }
             public string Name { get; set; }
@@ -29,15 +31,23 @@ namespace DigitalStoreApp
         private Order CheckLastOrder(Member loginUser)
         {
             //Reuse the last order that not being closed!
-            return db.Orders.SingleOrDefault(o => o.MemberID == loginUser.MemberID && o.Status == true);           
+            try
+            {
+                var order = db.Orders.SingleOrDefault(o => o.MemberID == loginUser.MemberID && o.Status == true);
+                return order;
+            }
+            catch
+            {
+
+            }
+            return null;
         }
         public ProductControl(Member loginUser)
         {
             InitializeComponent();
-            //this.loginUser = loginUser;
             context = new ISystemHandler();
             db = new DBContext();
-            loginUser = db.Members.SingleOrDefault(m => m.Email == "test@");         
+            this.loginUser = loginUser;
             order = CheckLastOrder(loginUser);
             if(order == null)
             {
@@ -154,21 +164,35 @@ namespace DigitalStoreApp
                 {
                     context.Orders().Close(order);
                     //extract bill code here
-
-                    //init new order and save to db
-                    order = new Order()
+                    frmBill frmBill = new frmBill
                     {
-                        Member = loginUser,
-                        MemberID = loginUser.MemberID,
-                        OrderDate = DateTime.Now,
-                        Status = true,
-                        OrderDetails = new List<OrderDetail>()
+                        loginUser = this.loginUser,
+                        mem = this.loginUser,
+                        order = db.Orders.Find(order.OrderID)
                     };
-                    order = context.Orders().Insert(order);
-                    products = context.Products().GetProducts();
-                    LoadProducts(products);
-                    LoadCbCategories();
-                    LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
+                    frmBill.Show();
+                    try
+                    {
+                        //init new order and save to db
+                        order = new Order()
+                        {
+                            Member = loginUser,
+                            MemberID = loginUser.MemberID,
+                            OrderDate = DateTime.Now,
+                            Status = true,
+                            OrderDetails = new List<OrderDetail>()
+                        };
+                        order = context.Orders().Insert(order);
+                        products = context.Products().GetProducts();
+                        LoadProducts(products);
+                        LoadCbCategories();
+                        LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
+                    }
+                    catch
+                    {
+
+                    }
+                    
                 }
             }   
             else
@@ -247,57 +271,7 @@ namespace DigitalStoreApp
             MessageBox.Show("Wrong format for Quantity!","Error");
         }
 
-        private void dgvOrder_CellValidated(object sender, DataGridViewCellEventArgs e)
-        {
-            var row = dgvOrder.CurrentRow;
-            if (row != null)
-            {
-                try
-                {
-                    Detail selected = (Detail)dgvOrder.CurrentRow.DataBoundItem;
-
-                    int quantity = selected.Quantity;
-                    int productID = selected.ProductID;
-
-                    int instock = db.Products.Find(productID).UnitsInStock;
-                    OrderDetail detail = db.OrderDetails.SingleOrDefault(d => d.OrderID == order.OrderID && d.ProductID == productID);
-                    if(detail != null)
-                    {
-                        if (detail.Quantity == quantity)
-                        {
-                            //
-                        }
-                        else
-                        {
-                            if (quantity > instock)
-                            {
-                                string message;
-                                if (instock >= 2)
-                                {
-                                    message = "\nThere are " + instock + " available!";
-                                }
-                                else
-                                {
-                                    message = "\nThere is " + instock + " available!";
-                                }
-                                MessageBox.Show("Maximum quantity reached!" + message, "Notification");
-                                selected.Quantity = instock;
-                            }
-                            detail.Order = order;
-                            detail.Quantity = selected.Quantity;
-                            context.OrderDetails().Update(detail);
-                            LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
-                        }
-                    }                                        
-                }
-                catch (Exception ex)
-                {
-                    string temp = ex.Message;
-                    //MessageBox.Show("No record is chosen!", "Notification");
-                }
-
-            }
-        }
+        
 
         private void btResetOrder_Click(object sender, EventArgs e)
         {
@@ -316,6 +290,72 @@ namespace DigitalStoreApp
             {
                 MessageBox.Show("No detail to extract bill!", "Notification");
             }
+        }
+
+        private void dgvOrder_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dgvOrder.CurrentRow;
+            
+            if (row != null)
+            {
+                try
+                {
+                    Detail selected = (Detail)dgvOrder.CurrentRow.DataBoundItem;
+
+                    int quantity = selected.Quantity;
+                    int productID = selected.ProductID;
+
+                    int instock = db.Products.Find(productID).UnitsInStock;
+                    OrderDetail detail = db.OrderDetails.SingleOrDefault(d => d.OrderID == order.OrderID && d.ProductID == productID);
+                    if (detail != null)
+                    {
+                        if (detail.Quantity == quantity)
+                        {
+                            //
+                        }
+                        else
+                        {
+                            if (quantity > instock)
+                            {
+                                ///////////////////
+                                if (bug)
+                                {
+                                    bug = !bug;
+                                    return;
+                                }
+                                bug = !bug;
+                                //////////////////
+                                string message;
+                                if (instock >= 2)
+                                {
+                                    message = "\nThere are " + instock + " available!";
+                                }
+                                else
+                                {
+                                    message = "\nThere is " + instock + " available!";
+                                }
+                                MessageBox.Show("Maximum quantity reached!" + message, "Notification");
+                                selected.Quantity = instock;
+                            }
+                            detail.Order = order;
+                            detail.Quantity = selected.Quantity;
+                            context.OrderDetails().Update(detail);
+                            LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string temp = ex.Message;
+                    //MessageBox.Show("No record is chosen!", "Notification");
+                }
+
+            }
+        }
+
+        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
