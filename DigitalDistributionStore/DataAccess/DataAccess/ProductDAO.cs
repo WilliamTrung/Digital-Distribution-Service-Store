@@ -41,9 +41,8 @@ namespace DataAccess
                     }
                     else
                     {
-                        throw new Exception("This product has already existed!");
-                    }
-                    
+                        Update(product);
+                    }                    
                 }
             }
             catch (Exception e)
@@ -61,7 +60,7 @@ namespace DataAccess
                     var check = context.Products.SingleOrDefault(p => p.ProductName == product.ProductName);
                     if (check == null)
                     {
-                        context.Entry<Product>(product).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.Entry<Product>(check).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                         context.SaveChanges();
                     }
                     else

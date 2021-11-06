@@ -67,6 +67,7 @@ namespace DigitalStoreApp
             this.tbProductName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbProductName.Location = new System.Drawing.Point(236, 38);
             this.tbProductName.Name = "tbProductName";
+            this.tbProductName.ReadOnly = true;
             this.tbProductName.Size = new System.Drawing.Size(360, 27);
             this.tbProductName.TabIndex = 13;
             // 
@@ -94,6 +95,7 @@ namespace DigitalStoreApp
             this.btConfirm.TabIndex = 15;
             this.btConfirm.Text = "Confirm";
             this.btConfirm.UseVisualStyleBackColor = false;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // btCancel
             // 
@@ -109,6 +111,7 @@ namespace DigitalStoreApp
             this.btCancel.TabIndex = 16;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // frmCategoryDetail
             // 

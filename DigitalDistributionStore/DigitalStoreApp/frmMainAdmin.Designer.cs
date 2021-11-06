@@ -1,4 +1,6 @@
 ﻿
+using BusinessObject;
+
 namespace DigitalStoreApp
 {
     partial class frmMainAdmin
@@ -40,10 +42,10 @@ namespace DigitalStoreApp
             this.pnCategory = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
             this.pnMain = new System.Windows.Forms.Panel();
-            this.ctrlOrderManagement = new DigitalStoreApp.AdminManagementControl();
-            this.ctrlMemberManagement = new DigitalStoreApp.AdminManagementControl();
-            this.ctrlProductManagement = new DigitalStoreApp.AdminManagementControl();
-            this.ctrlCategoryManagement = new DigitalStoreApp.AdminManagementControl();
+            this.ctrlOrderManagement = new DigitalStoreApp.AdminManagementControl(loginUser);
+            this.ctrlMemberManagement = new DigitalStoreApp.AdminManagementControl(loginUser);
+            this.ctrlProductManagement = new DigitalStoreApp.AdminManagementControl(loginUser);
+            this.ctrlCategoryManagement = new DigitalStoreApp.AdminManagementControl(loginUser);
             this.pnMenu.SuspendLayout();
             this.pnMain.SuspendLayout();
             this.SuspendLayout();

@@ -14,7 +14,7 @@ namespace DigitalStoreApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainAdmin());
+            Application.Run(new frmMainAdmin(null));
             //Application.Run(new frmLogin());
         }
     }

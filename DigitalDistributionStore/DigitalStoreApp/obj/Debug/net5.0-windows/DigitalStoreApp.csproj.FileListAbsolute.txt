@@ -132,3 +132,4 @@ C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\Digital
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmMemberDetail.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmOrderDetail.resources
 C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmProductDetail.resources
+C:\Users\Loliizabezt\Documents\GitHub\Digital-Distribution-Service-Store\DigitalDistributionStore\DigitalStoreApp\obj\Debug\net5.0-windows\DigitalStoreApp.frmBill.resources
