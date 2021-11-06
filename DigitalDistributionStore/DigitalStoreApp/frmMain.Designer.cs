@@ -40,6 +40,9 @@ namespace DigitalStoreApp
             this.btProduct = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
+            this.ctrlProduct = new DigitalStoreApp.ProductControl(loginUser);
+            this.ctrlProfile = new DigitalStoreApp.ProfileControl(loginUser);
+            this.ctrlOrder = new DigitalStoreApp.OrderControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +59,7 @@ namespace DigitalStoreApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 715);
             this.panel1.TabIndex = 0;
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnSideBar
             // 
@@ -142,7 +146,29 @@ namespace DigitalStoreApp
             this.btClose.Size = new System.Drawing.Size(42, 41);
             this.btClose.TabIndex = 3;
             this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            //this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // ctrlProduct
+            // 
+            this.ctrlProduct.Location = new System.Drawing.Point(251, 97);
+            this.ctrlProduct.Name = "ctrlProduct";
+            this.ctrlProduct.Size = new System.Drawing.Size(1103, 592);
+            this.ctrlProduct.TabIndex = 4;
+            // 
+            // ctrlProfile
+            // 
+            this.ctrlProfile.Location = new System.Drawing.Point(251, 80);
+            this.ctrlProfile.Name = "ctrlProfile";
+            this.ctrlProfile.Size = new System.Drawing.Size(1103, 609);
+            this.ctrlProfile.TabIndex = 5;
+            // 
+            // ctrlOrder
+            // 
+            this.ctrlOrder.Location = new System.Drawing.Point(251, 110);
+            this.ctrlOrder.Name = "ctrlOrder";
+            this.ctrlOrder.Size = new System.Drawing.Size(1103, 579);
+            this.ctrlOrder.TabIndex = 6;
+            //this.ctrlOrder.Load += new System.EventHandler(this.orderControl1_Load);
             // 
             // frmMain
             // 
@@ -151,6 +177,9 @@ namespace DigitalStoreApp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1356, 715);
             this.ControlBox = false;
+            this.Controls.Add(this.ctrlOrder);
+            this.Controls.Add(this.ctrlProfile);
+            this.Controls.Add(this.ctrlProduct);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

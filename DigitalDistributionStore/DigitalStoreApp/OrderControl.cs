@@ -16,14 +16,14 @@ namespace DigitalStoreApp
     public partial class OrderControl : UserControl
     {
         ISystemHandler context;
-        Member loginUser { get; set; }
+        public Member loginUser { get; set; }
         OrderRepository orderRepository = new OrderRepository();
         OrderDetailRepository orderDetailRepository = new OrderDetailRepository();
         Order order;
-        public OrderControl(Member loginUser)
+        public OrderControl()
         {
             InitializeComponent();
-            this.loginUser = loginUser;
+            //this.loginUser = loginUser;
             context = new ISystemHandler();
         }
 
