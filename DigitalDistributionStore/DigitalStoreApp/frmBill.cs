@@ -18,7 +18,7 @@ namespace DigitalStoreApp
         ISystemHandler context;
         public Order order { get; set; }
         public Member mem { get; set; }
-        public OrderDetailRepository orderDetailRepository { get; set; }
+        public Member loginUser {get;set;}
         public frmBill()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace DigitalStoreApp
         {
             if (order != null)
             {
-                var orderDetails = orderDetailRepository.GetOrderDetailsByOrder(order);
+                var orderDetails = context.OrderDetails().GetOrderDetailsByOrder(order);
                 LoadListOrderDetails(orderDetails);
                 lbOrderIDInfo.Text = order.OrderID.ToString();
                 lbEmployeeIDInfo.Text = order.MemberID.ToString();
@@ -59,10 +59,17 @@ namespace DigitalStoreApp
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bill extraxted");
-            frmMain frm = new frmMain(mem);
-            frm.Show();
-            Close();
+            if (loginUser.IsAdmin == true)
+            {
+                Close();
+            }
+            else
+            {
+                //MessageBox.Show("Bill extracted");
+                frmMain frm = new frmMain(mem);
+                frm.Show();
+                Close();
+            }         
         }
     }
 }

@@ -28,8 +28,15 @@ namespace DigitalStoreApp
             ctrlMemberManagement.Hide();
             ctrlCategoryManagement.Show();
             ctrlCategoryManagement.BringToFront();
-
-            this.loginUser = loginUser;
+            //
+            //this.loginUser = loginUser;
+            this.loginUser = new DBContext().Members.Find(2);
+            loginUser = this.loginUser;
+            //
+            ctrlCategoryManagement.loginUser = loginUser;
+            ctrlMemberManagement.loginUser = loginUser;
+            ctrlOrderManagement.loginUser = loginUser;
+            ctrlProductManagement.loginUser = loginUser;
         }
 
         private void btCategory_Click(object sender, EventArgs e)

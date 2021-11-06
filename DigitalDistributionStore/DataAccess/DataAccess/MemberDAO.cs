@@ -30,8 +30,16 @@ namespace DataAccess
             {
                 using (var context = new DBContext())
                 {
-                    context.Add(member);
-                    context.SaveChanges();
+                    var check = context.Members.SingleOrDefault(m => m.Email == member.Email);
+                    if(check == null)
+                    {
+                        context.Add(member);
+                        context.SaveChanges();
+                    }       
+                    else
+                    {
+                        throw new Exception("This email has already existed!");
+                    }
                 }
             }
             catch (Exception)
@@ -64,6 +72,14 @@ namespace DataAccess
                     if(check == null)
                     {
                         context.Entry<Member>(member).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    else if(check.MemberID == member.MemberID)
+                    {
+                        check.Password = member.Password;
+                        check.Status = member.Status;
+                        check.IsAdmin = member.IsAdmin;
+                        context.Entry<Member>(check).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                         context.SaveChanges();
                     }
                     else

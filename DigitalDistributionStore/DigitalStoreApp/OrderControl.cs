@@ -97,8 +97,7 @@ namespace DigitalStoreApp
             {
                 frmBill frmBill = new frmBill {
                     mem=this.loginUser,
-                    order=this.order,
-                    orderDetailRepository=orderDetailRepository
+                    order=this.order
                 };
                 frmBill.Show();
             }

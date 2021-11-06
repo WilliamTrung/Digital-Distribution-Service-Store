@@ -59,15 +59,21 @@ namespace DigitalStoreApp
             // 
             // dgvDisplay
             // 
+            this.dgvDisplay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvDisplay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvDisplay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
             this.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisplay.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvDisplay.Location = new System.Drawing.Point(16, 132);
+            this.dgvDisplay.MultiSelect = false;
             this.dgvDisplay.Name = "dgvDisplay";
             this.dgvDisplay.RowHeadersWidth = 51;
             this.dgvDisplay.RowTemplate.Height = 29;
+            this.dgvDisplay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDisplay.Size = new System.Drawing.Size(852, 443);
             this.dgvDisplay.TabIndex = 4;
             this.dgvDisplay.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplay_CellDoubleClick);
+            this.dgvDisplay.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplay_CellValueChanged);
             // 
             // pnR
             // 
@@ -304,6 +310,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.dgvDisplay);
             this.Name = "AdminManagementControl";
             this.Size = new System.Drawing.Size(1105, 591);
+            this.Load += new System.EventHandler(this.AdminManagementControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
             this.pnR.ResumeLayout(false);
             this.pnSearchName.ResumeLayout(false);
