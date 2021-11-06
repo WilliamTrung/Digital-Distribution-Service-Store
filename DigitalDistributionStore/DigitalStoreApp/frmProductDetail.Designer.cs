@@ -31,7 +31,6 @@ namespace DigitalStoreApp
         {
             this.btCancel = new System.Windows.Forms.Button();
             this.btConfirm = new System.Windows.Forms.Button();
-            this.txbCategory = new System.Windows.Forms.TextBox();
             this.lbStatus = new System.Windows.Forms.Label();
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.lbPrice = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@ namespace DigitalStoreApp
             this.lbOrderName = new System.Windows.Forms.Label();
             this.txbAmount = new System.Windows.Forms.TextBox();
             this.lbStock = new System.Windows.Forms.Label();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btCancel
@@ -57,6 +57,7 @@ namespace DigitalStoreApp
             this.btCancel.TabIndex = 47;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btConfirm
             // 
@@ -72,16 +73,7 @@ namespace DigitalStoreApp
             this.btConfirm.TabIndex = 46;
             this.btConfirm.Text = "Confirm";
             this.btConfirm.UseVisualStyleBackColor = false;
-            // 
-            // txbCategory
-            // 
-            this.txbCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.txbCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbCategory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txbCategory.Location = new System.Drawing.Point(283, 245);
-            this.txbCategory.Name = "txbCategory";
-            this.txbCategory.Size = new System.Drawing.Size(360, 27);
-            this.txbCategory.TabIndex = 45;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // lbStatus
             // 
@@ -134,6 +126,7 @@ namespace DigitalStoreApp
             this.txbID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txbID.Location = new System.Drawing.Point(283, 45);
             this.txbID.Name = "txbID";
+            this.txbID.ReadOnly = true;
             this.txbID.Size = new System.Drawing.Size(360, 27);
             this.txbID.TabIndex = 40;
             // 
@@ -181,17 +174,25 @@ namespace DigitalStoreApp
             this.lbStock.TabIndex = 48;
             this.lbStock.Text = "In Stock :";
             // 
+            // cbCategory
+            // 
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(283, 246);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(360, 28);
+            this.cbCategory.TabIndex = 50;
+            // 
             // frmProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(800, 405);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.txbAmount);
             this.Controls.Add(this.lbStock);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btConfirm);
-            this.Controls.Add(this.txbCategory);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.txbPrice);
             this.Controls.Add(this.lbPrice);
@@ -211,7 +212,6 @@ namespace DigitalStoreApp
 
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btConfirm;
-        private System.Windows.Forms.TextBox txbCategory;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.Label lbPrice;
@@ -221,5 +221,6 @@ namespace DigitalStoreApp
         private System.Windows.Forms.Label lbOrderName;
         private System.Windows.Forms.TextBox txbAmount;
         private System.Windows.Forms.Label lbStock;
+        private System.Windows.Forms.ComboBox cbCategory;
     }
 }

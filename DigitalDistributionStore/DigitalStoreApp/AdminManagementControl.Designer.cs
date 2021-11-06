@@ -36,9 +36,9 @@ namespace DigitalStoreApp
             this.tbSearchName = new System.Windows.Forms.TextBox();
             this.btSortByName = new System.Windows.Forms.Button();
             this.pnSearchDateForOrder = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.lbTo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbFrom = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.btLoadAll = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@ namespace DigitalStoreApp
             this.dgvDisplay.RowTemplate.Height = 29;
             this.dgvDisplay.Size = new System.Drawing.Size(852, 443);
             this.dgvDisplay.TabIndex = 4;
+            this.dgvDisplay.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplay_CellDoubleClick);
             // 
             // pnR
             // 
@@ -110,6 +111,7 @@ namespace DigitalStoreApp
             this.tbSearchName.Name = "tbSearchName";
             this.tbSearchName.Size = new System.Drawing.Size(451, 27);
             this.tbSearchName.TabIndex = 11;
+            this.tbSearchName.TextChanged += new System.EventHandler(this.tbSearchName_TextChanged);
             // 
             // btSortByName
             // 
@@ -125,12 +127,13 @@ namespace DigitalStoreApp
             this.btSortByName.TabIndex = 13;
             this.btSortByName.Text = "Sort by Name";
             this.btSortByName.UseVisualStyleBackColor = false;
+            this.btSortByName.Click += new System.EventHandler(this.btSortByName_Click);
             // 
             // pnSearchDateForOrder
             // 
-            this.pnSearchDateForOrder.Controls.Add(this.textBox2);
+            this.pnSearchDateForOrder.Controls.Add(this.dtpEnd);
+            this.pnSearchDateForOrder.Controls.Add(this.dtpStart);
             this.pnSearchDateForOrder.Controls.Add(this.lbTo);
-            this.pnSearchDateForOrder.Controls.Add(this.textBox1);
             this.pnSearchDateForOrder.Controls.Add(this.lbFrom);
             this.pnSearchDateForOrder.Controls.Add(this.lbDate);
             this.pnSearchDateForOrder.Location = new System.Drawing.Point(16, 14);
@@ -138,15 +141,19 @@ namespace DigitalStoreApp
             this.pnSearchDateForOrder.Size = new System.Drawing.Size(590, 71);
             this.pnSearchDateForOrder.TabIndex = 17;
             // 
-            // textBox2
+            // dtpEnd
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox2.Location = new System.Drawing.Point(352, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 27);
-            this.textBox2.TabIndex = 17;
+            this.dtpEnd.Location = new System.Drawing.Point(340, 35);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(250, 27);
+            this.dtpEnd.TabIndex = 19;
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Location = new System.Drawing.Point(56, 35);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(250, 27);
+            this.dtpStart.TabIndex = 18;
             // 
             // lbTo
             // 
@@ -158,16 +165,6 @@ namespace DigitalStoreApp
             this.lbTo.Size = new System.Drawing.Size(24, 20);
             this.lbTo.TabIndex = 16;
             this.lbTo.Text = "To";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Location = new System.Drawing.Point(60, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 27);
-            this.textBox1.TabIndex = 15;
             // 
             // lbFrom
             // 
@@ -205,12 +202,13 @@ namespace DigitalStoreApp
             this.btLoadAll.TabIndex = 12;
             this.btLoadAll.Text = "Load All";
             this.btLoadAll.UseVisualStyleBackColor = false;
+            this.btLoadAll.Click += new System.EventHandler(this.btLoadAll_Click);
             // 
             // pnCategoryForProduct
             // 
             this.pnCategoryForProduct.Controls.Add(this.cbCategory);
             this.pnCategoryForProduct.Controls.Add(this.lbCategory);
-            this.pnCategoryForProduct.Location = new System.Drawing.Point(16, 40);
+            this.pnCategoryForProduct.Location = new System.Drawing.Point(16, 38);
             this.pnCategoryForProduct.Name = "pnCategoryForProduct";
             this.pnCategoryForProduct.Size = new System.Drawing.Size(603, 27);
             this.pnCategoryForProduct.TabIndex = 16;
@@ -225,6 +223,7 @@ namespace DigitalStoreApp
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(416, 28);
             this.cbCategory.TabIndex = 14;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // lbCategory
             // 
@@ -251,6 +250,7 @@ namespace DigitalStoreApp
             this.btDelete.TabIndex = 11;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btCreate
             // 
@@ -266,6 +266,7 @@ namespace DigitalStoreApp
             this.btCreate.TabIndex = 9;
             this.btCreate.Text = "Create";
             this.btCreate.UseVisualStyleBackColor = false;
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
             // btUpdate
             // 
@@ -281,6 +282,7 @@ namespace DigitalStoreApp
             this.btUpdate.TabIndex = 10;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // pnCUD
             // 
@@ -331,11 +333,11 @@ namespace DigitalStoreApp
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label lbCategory;
         private System.Windows.Forms.Panel pnSearchDateForOrder;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lbTo;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbFrom;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Panel pnSearchName;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.DateTimePicker dtpStart;
     }
 }

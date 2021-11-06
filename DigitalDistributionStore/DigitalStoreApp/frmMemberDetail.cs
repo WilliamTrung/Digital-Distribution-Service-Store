@@ -15,6 +15,7 @@ namespace DigitalStoreApp
         {
             InitializeComponent();
             context = new ISystemHandler();
+
         }
 
         private void frmMemberDetail_Load(object sender, System.EventArgs e)

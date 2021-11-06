@@ -33,8 +33,20 @@ namespace DataAccess
                 {
                     var check = context.Categories.SingleOrDefault(c => c.CategoryName == category.CategoryName);
                     if (check == null)
+                    {
+                        check = context.Categories.Find(category.CategoryID);
+                        if(check == null)
                         {
-                        context.Categories.Add(category);
+                            var add = new Category()
+                            {
+                                CategoryName = category.CategoryName
+                            };
+                            context.Categories.Add(add);
+                        }
+                        else
+                        {
+                            Update(category);
+                        }
                         context.SaveChanges();
                     }
                     else

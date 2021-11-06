@@ -1,11 +1,13 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Windows.Forms;
 
 namespace DigitalStoreApp
 {
     public partial class frmMainAdmin : Form
     {
-        public frmMainAdmin()
+        Member loginUser;
+        public frmMainAdmin(Member loginUser)
         {
             InitializeComponent();
             pnSideBar.Height = btCategory.Height;
@@ -27,7 +29,7 @@ namespace DigitalStoreApp
             ctrlCategoryManagement.Show();
             ctrlCategoryManagement.BringToFront();
 
-
+            this.loginUser = loginUser;
         }
 
         private void btCategory_Click(object sender, EventArgs e)
