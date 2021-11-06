@@ -29,7 +29,6 @@ namespace DigitalStoreApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbStatus = new System.Windows.Forms.TextBox();
             this.lbStatus = new System.Windows.Forms.Label();
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
@@ -39,17 +38,8 @@ namespace DigitalStoreApp
             this.lbOrderName = new System.Windows.Forms.Label();
             this.btCancel = new System.Windows.Forms.Button();
             this.btConfirm = new System.Windows.Forms.Button();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
-            // txbStatus
-            // 
-            this.txbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
-            this.txbStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbStatus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txbStatus.Location = new System.Drawing.Point(285, 222);
-            this.txbStatus.Name = "txbStatus";
-            this.txbStatus.Size = new System.Drawing.Size(360, 27);
-            this.txbStatus.TabIndex = 35;
             // 
             // lbStatus
             // 
@@ -104,6 +94,7 @@ namespace DigitalStoreApp
             this.txbID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txbID.Location = new System.Drawing.Point(285, 60);
             this.txbID.Name = "txbID";
+            this.txbID.ReadOnly = true;
             this.txbID.Size = new System.Drawing.Size(360, 27);
             this.txbID.TabIndex = 30;
             // 
@@ -163,15 +154,27 @@ namespace DigitalStoreApp
             this.btConfirm.UseVisualStyleBackColor = false;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
+            // cbStatus
+            // 
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbStatus.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbStatus.Location = new System.Drawing.Point(285, 223);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(78, 27);
+            this.cbStatus.TabIndex = 38;
+            this.cbStatus.Text = "Active";
+            this.cbStatus.UseVisualStyleBackColor = true;
+            // 
             // frmMemberDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(800, 382);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btConfirm);
-            this.Controls.Add(this.txbStatus);
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lbEmail);
@@ -189,8 +192,6 @@ namespace DigitalStoreApp
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txbStatus;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label lbEmail;
@@ -200,5 +201,6 @@ namespace DigitalStoreApp
         private System.Windows.Forms.Label lbOrderName;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btConfirm;
+        private System.Windows.Forms.CheckBox cbStatus;
     }
 }

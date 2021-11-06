@@ -17,28 +17,64 @@ namespace DigitalStoreApp
             context = new ISystemHandler();
 
         }
-
+        private void CheckBoxStatus()
+        {
+            cbStatus.Enabled = false;
+            if (InsertOrUpdate)//update
+            {
+                cbStatus.Checked = loginUser.Status;
+                if (loginUser.Status == true)
+                {
+                    cbStatus.Text = "Active";
+                }
+                else
+                {
+                    cbStatus.Text = "Deactive";
+                }
+            }
+            else //insert
+            {
+                cbStatus.Checked = true;
+                cbStatus.Text = "Active";
+            }
+                      
+        }
         private void frmMemberDetail_Load(object sender, System.EventArgs e)
         {
             txbEmail.Enabled = true;
             txbID.Enabled = true;
             txbMemberName.Enabled = true;
-            if (loginUser != null && InsertOrUpdate)
+            if (loginUser != null && InsertOrUpdate)//Update
             {
                 txbID.Text = loginUser.MemberID.ToString();
                 txbEmail.Text = loginUser.Email.ToString();
                 txbMemberName.Text = loginUser.MemberName.ToString();
-                txbStatus.Text = loginUser.Status.ToString();
-                txbStatus.Enabled = false;
-                if (loginUser.IsAdmin)
-                {
-                    txbStatus.Enabled = true;
-                }
+                CheckBoxStatus();
+                txbEmail.ReadOnly = true;
+            }
+            else if(loginUser != null && !InsertOrUpdate)//Insert
+            {
+                txbID.Text = loginUser.MemberID.ToString();
+                CheckBoxStatus();
             }
         }
 
         private void btCancel_Click(object sender, System.EventArgs e) => Close();
-
+        private Boolean Validate(Member member)
+        {
+            Boolean check = true;
+            if (member.Email.Trim().Length == 0)
+            {
+                MessageBox.Show("Email must not be blank!", "Notification");
+                check = false;
+            }
+            if (member.MemberName.Trim().Length == 0)
+            {
+                MessageBox.Show("Name must not be blank!", "Notification");
+                check = false;
+            }
+            return check;
+        }
         private void btConfirm_Click(object sender, System.EventArgs e)
         {
             try
@@ -47,22 +83,34 @@ namespace DigitalStoreApp
                 {
                     MemberName=txbMemberName.Text,
                     Email=txbEmail.Text,
-                    Status=bool.Parse(txbStatus.Text),
+                    Status= cbStatus.Checked,
                     Password=loginUser.Password,
                     IsAdmin=loginUser.IsAdmin
                 };
                 if (member != null)
                 {
-                    if (InsertOrUpdate)
+                    if (Validate(member))
                     {
-                        context.Members().Update(member);
-                        MessageBox.Show("Update successfully");
-                    }
-                    else
-                    {
-                        context.Members().Insert(member);
-                        MessageBox.Show("Insert successfully");
-                    }
+                        try
+                        {
+                            if (InsertOrUpdate)
+                            {
+                                context.Members().Update(member);
+                                MessageBox.Show("Update successfully");
+                            }
+                            else
+                            {
+                                member.Password = "123";
+                                context.Members().Insert(member);
+                                MessageBox.Show("Insert successfully");
+                            }
+                            Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message,"Warning");
+                        }
+                    }                   
                 }
             }
             catch(Exception ex)
