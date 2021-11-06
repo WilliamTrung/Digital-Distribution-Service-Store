@@ -93,7 +93,7 @@ namespace DigitalStoreApp
             this.btCheckOutOrder.Name = "btCheckOutOrder";
             this.btCheckOutOrder.Size = new System.Drawing.Size(196, 55);
             this.btCheckOutOrder.TabIndex = 10;
-            this.btCheckOutOrder.Text = "Check Out";
+            this.btCheckOutOrder.Text = "Extract Bill";
             this.btCheckOutOrder.UseVisualStyleBackColor = false;
             this.btCheckOutOrder.Click += new System.EventHandler(this.btCheckOutOrder_Click);
             // 

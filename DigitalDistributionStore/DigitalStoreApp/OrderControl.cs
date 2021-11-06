@@ -96,6 +96,7 @@ namespace DigitalStoreApp
             if (order != null)
             {
                 frmBill frmBill = new frmBill {
+                    mem=this.loginUser,
                     order=this.order,
                     orderDetailRepository=orderDetailRepository
                 };

@@ -8,7 +8,7 @@ namespace DigitalStoreApp
     public partial class frmMain : Form
     {
         static DBContext db = new DBContext();
-        Member loginUser= db.Members.SingleOrDefault(m => m.Email == "test@");
+        Member loginUser = db.Members.SingleOrDefault(m => m.Email == "test@");
         ISystemHandler context;
         public frmMain(Member loginUser)
         {
@@ -51,6 +51,10 @@ namespace DigitalStoreApp
             ctrlProfile.BringToFront();
         }
 
+        private void btClose_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 
 

@@ -17,6 +17,7 @@ namespace DigitalStoreApp
     {
         ISystemHandler context;
         public Order order { get; set; }
+        public Member mem { get; set; }
         public OrderDetailRepository orderDetailRepository { get; set; }
         public frmBill()
         {
@@ -36,6 +37,7 @@ namespace DigitalStoreApp
                 lbTotalMoney.Text = total.ToString();
             }
         }
+
         public void LoadListOrderDetails(IEnumerable<OrderDetail> orderDetails)
         {
             var queryList = (from orderDetail in orderDetails
@@ -53,6 +55,14 @@ namespace DigitalStoreApp
                              }).ToList();
             dgvDetail.DataSource = queryList;
             dgvDetail.Refresh();
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bill extraxted");
+            frmMain frm = new frmMain(mem);
+            frm.Show();
+            Close();
         }
     }
 }

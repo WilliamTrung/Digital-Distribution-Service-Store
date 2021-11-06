@@ -85,6 +85,9 @@ namespace DigitalStoreApp
 
         private void btLogout_Click(object sender, EventArgs e)
         {
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
     }
 }
