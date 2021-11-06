@@ -59,17 +59,22 @@ namespace DigitalStoreApp
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            if (loginUser.IsAdmin == true)
+            try
             {
-                Close();
+                if (loginUser.IsAdmin == true)
+                {
+                    Close();
+                }
+                else
+                {
+                    //MessageBox.Show("Bill extracted");
+                    Close();
+                }
             }
-            else
+            catch
             {
-                //MessageBox.Show("Bill extracted");
-                frmMain frm = new frmMain(mem);
-                frm.Show();
-                Close();
-            }         
+
+            }  
         }
     }
 }

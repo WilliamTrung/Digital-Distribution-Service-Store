@@ -14,7 +14,7 @@ namespace DigitalStoreApp
 {
     public partial class ProfileControl : UserControl
     {
-        Member loginUser;
+        public Member loginUser { get; set; }
         ISystemHandler context;
         public ProfileControl(Member loginUser)
         {
@@ -26,7 +26,7 @@ namespace DigitalStoreApp
         private void btEditProfile_Click(object sender, EventArgs e)
         {
             frmMemberDetail frmMemberDetail = new frmMemberDetail {
-                loginUser = loginUser,
+                loginUser = this.loginUser,
                 InsertOrUpdate = true
             };
             if (frmMemberDetail.ShowDialog() == DialogResult.OK)

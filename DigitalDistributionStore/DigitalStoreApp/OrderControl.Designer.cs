@@ -31,18 +31,13 @@ namespace DigitalStoreApp
         {
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.pnOrderAction = new System.Windows.Forms.Panel();
-            this.btDeleteOrder = new System.Windows.Forms.Button();
             this.btCheckOutOrder = new System.Windows.Forms.Button();
-            this.dgvOrderDetail = new System.Windows.Forms.DataGridView();
             this.lbOrderList = new System.Windows.Forms.Label();
             this.lbProductInOrder = new System.Windows.Forms.Label();
-            this.btSortByDate = new System.Windows.Forms.Button();
             this.pnTop = new System.Windows.Forms.Panel();
-            this.btSortbyTime = new System.Windows.Forms.Button();
+            this.btReload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.pnOrderAction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
-            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvOrder
@@ -53,33 +48,17 @@ namespace DigitalStoreApp
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 29;
-            this.dgvOrder.Size = new System.Drawing.Size(454, 423);
+            this.dgvOrder.Size = new System.Drawing.Size(754, 423);
             this.dgvOrder.TabIndex = 3;
             this.dgvOrder.SelectionChanged += new System.EventHandler(this.dgvOrder_SelectionChanged);
             // 
             // pnOrderAction
             // 
-            this.pnOrderAction.Controls.Add(this.btDeleteOrder);
             this.pnOrderAction.Controls.Add(this.btCheckOutOrder);
-            this.pnOrderAction.Location = new System.Drawing.Point(525, 475);
+            this.pnOrderAction.Location = new System.Drawing.Point(857, 475);
             this.pnOrderAction.Name = "pnOrderAction";
-            this.pnOrderAction.Size = new System.Drawing.Size(541, 96);
+            this.pnOrderAction.Size = new System.Drawing.Size(222, 96);
             this.pnOrderAction.TabIndex = 5;
-            // 
-            // btDeleteOrder
-            // 
-            this.btDeleteOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btDeleteOrder.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btDeleteOrder.FlatAppearance.BorderSize = 0;
-            this.btDeleteOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDeleteOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDeleteOrder.ForeColor = System.Drawing.Color.White;
-            this.btDeleteOrder.Location = new System.Drawing.Point(53, 21);
-            this.btDeleteOrder.Name = "btDeleteOrder";
-            this.btDeleteOrder.Size = new System.Drawing.Size(196, 55);
-            this.btDeleteOrder.TabIndex = 11;
-            this.btDeleteOrder.Text = "Delete Order";
-            this.btDeleteOrder.UseVisualStyleBackColor = false;
             // 
             // btCheckOutOrder
             // 
@@ -89,24 +68,13 @@ namespace DigitalStoreApp
             this.btCheckOutOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckOutOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btCheckOutOrder.ForeColor = System.Drawing.Color.White;
-            this.btCheckOutOrder.Location = new System.Drawing.Point(298, 21);
+            this.btCheckOutOrder.Location = new System.Drawing.Point(16, 24);
             this.btCheckOutOrder.Name = "btCheckOutOrder";
-            this.btCheckOutOrder.Size = new System.Drawing.Size(196, 55);
+            this.btCheckOutOrder.Size = new System.Drawing.Size(190, 55);
             this.btCheckOutOrder.TabIndex = 10;
-            this.btCheckOutOrder.Text = "Extract Bill";
+            this.btCheckOutOrder.Text = "Check Details";
             this.btCheckOutOrder.UseVisualStyleBackColor = false;
             this.btCheckOutOrder.Click += new System.EventHandler(this.btCheckOutOrder_Click);
-            // 
-            // dgvOrderDetail
-            // 
-            this.dgvOrderDetail.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(80)))), ((int)(((byte)(113)))));
-            this.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetail.Location = new System.Drawing.Point(525, 148);
-            this.dgvOrderDetail.Name = "dgvOrderDetail";
-            this.dgvOrderDetail.RowHeadersWidth = 51;
-            this.dgvOrderDetail.RowTemplate.Height = 29;
-            this.dgvOrderDetail.Size = new System.Drawing.Size(538, 329);
-            this.dgvOrderDetail.TabIndex = 7;
             // 
             // lbOrderList
             // 
@@ -130,53 +98,37 @@ namespace DigitalStoreApp
             this.lbProductInOrder.TabIndex = 9;
             this.lbProductInOrder.Text = "Order Details";
             // 
-            // btSortByDate
-            // 
-            this.btSortByDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btSortByDate.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btSortByDate.FlatAppearance.BorderSize = 0;
-            this.btSortByDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSortByDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btSortByDate.ForeColor = System.Drawing.Color.White;
-            this.btSortByDate.Location = new System.Drawing.Point(258, 80);
-            this.btSortByDate.Name = "btSortByDate";
-            this.btSortByDate.Size = new System.Drawing.Size(196, 28);
-            this.btSortByDate.TabIndex = 9;
-            this.btSortByDate.Text = "Sort by Status";
-            this.btSortByDate.UseVisualStyleBackColor = false;
-            // 
             // pnTop
             // 
-            this.pnTop.Controls.Add(this.btSortByDate);
-            this.pnTop.Controls.Add(this.btSortbyTime);
             this.pnTop.Location = new System.Drawing.Point(49, 0);
             this.pnTop.Name = "pnTop";
             this.pnTop.Size = new System.Drawing.Size(1014, 121);
             this.pnTop.TabIndex = 11;
             // 
-            // btSortbyTime
+            // btReload
             // 
-            this.btSortbyTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
-            this.btSortbyTime.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btSortbyTime.FlatAppearance.BorderSize = 0;
-            this.btSortbyTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSortbyTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btSortbyTime.ForeColor = System.Drawing.Color.White;
-            this.btSortbyTime.Location = new System.Drawing.Point(0, 80);
-            this.btSortbyTime.Name = "btSortbyTime";
-            this.btSortbyTime.Size = new System.Drawing.Size(196, 28);
-            this.btSortbyTime.TabIndex = 10;
-            this.btSortbyTime.Text = "Sort by Latest";
-            this.btSortbyTime.UseVisualStyleBackColor = false;
+            this.btReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.btReload.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btReload.FlatAppearance.BorderSize = 0;
+            this.btReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btReload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btReload.ForeColor = System.Drawing.Color.White;
+            this.btReload.Location = new System.Drawing.Point(857, 148);
+            this.btReload.Name = "btReload";
+            this.btReload.Size = new System.Drawing.Size(196, 56);
+            this.btReload.TabIndex = 10;
+            this.btReload.Text = "Reload";
+            this.btReload.UseVisualStyleBackColor = false;
+            this.btReload.Click += new System.EventHandler(this.btReload_Click);
             // 
             // OrderControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btReload);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.lbProductInOrder);
             this.Controls.Add(this.lbOrderList);
-            this.Controls.Add(this.dgvOrderDetail);
             this.Controls.Add(this.pnOrderAction);
             this.Controls.Add(this.dgvOrder);
             this.Name = "OrderControl";
@@ -184,8 +136,6 @@ namespace DigitalStoreApp
             this.Load += new System.EventHandler(this.OrderControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.pnOrderAction.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();
-            this.pnTop.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,13 +145,10 @@ namespace DigitalStoreApp
 
         private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.Panel pnOrderAction;
-        private System.Windows.Forms.DataGridView dgvOrderDetail;
         private System.Windows.Forms.Label lbOrderList;
         private System.Windows.Forms.Label lbProductInOrder;
-        private System.Windows.Forms.Button btSortByDate;
         private System.Windows.Forms.Panel pnTop;
-        private System.Windows.Forms.Button btSortbyTime;
-        private System.Windows.Forms.Button btDeleteOrder;
+        private System.Windows.Forms.Button btReload;
         private System.Windows.Forms.Button btCheckOutOrder;
     }
 }

@@ -184,6 +184,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.lbOrderName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMemberDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMemberDetail";
             this.Load += new System.EventHandler(this.frmMemberDetail_Load);
             this.ResumeLayout(false);

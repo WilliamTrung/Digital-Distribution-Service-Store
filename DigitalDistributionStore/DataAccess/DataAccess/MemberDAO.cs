@@ -76,6 +76,7 @@ namespace DataAccess
                     }
                     else if(check.MemberID == member.MemberID)
                     {
+                        check.MemberName = member.MemberName;
                         check.Password = member.Password;
                         check.Status = member.Status;
                         check.IsAdmin = member.IsAdmin;

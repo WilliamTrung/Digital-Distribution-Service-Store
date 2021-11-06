@@ -203,6 +203,7 @@ namespace DigitalStoreApp
             this.Controls.Add(this.lbOrderName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrderDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOrderDetail";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
             this.ResumeLayout(false);

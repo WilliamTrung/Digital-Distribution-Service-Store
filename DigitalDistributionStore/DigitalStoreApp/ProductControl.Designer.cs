@@ -221,7 +221,8 @@ namespace DigitalStoreApp
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(481, 311);
             this.dgvOrder.TabIndex = 2;
-            this.dgvOrder.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellValidated);
+            this.dgvOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellContentClick);
+            this.dgvOrder.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellValueChanged);
             this.dgvOrder.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvOrder_DataError);
             // 
             // lbProducList

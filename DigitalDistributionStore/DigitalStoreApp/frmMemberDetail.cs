@@ -79,8 +79,9 @@ namespace DigitalStoreApp
         {
             try
             {
-                Member member= new Member
+                Member member = new Member
                 {
+                    MemberID = loginUser.MemberID,
                     MemberName=txbMemberName.Text,
                     Email=txbEmail.Text,
                     Status= cbStatus.Checked,
@@ -97,6 +98,7 @@ namespace DigitalStoreApp
                             {
                                 context.Members().Update(member);
                                 MessageBox.Show("Update successfully");
+                                loginUser = member;
                             }
                             else
                             {
