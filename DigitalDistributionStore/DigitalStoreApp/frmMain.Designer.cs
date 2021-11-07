@@ -40,8 +40,6 @@ namespace DigitalStoreApp
             this.btProduct = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
-            this.ctrlProduct = new DigitalStoreApp.ProductControl(loginUser);
-            this.ctrlProfile = new DigitalStoreApp.ProfileControl(loginUser);
             this.ctrlOrder = new DigitalStoreApp.OrderControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +57,6 @@ namespace DigitalStoreApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 715);
             this.panel1.TabIndex = 0;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnSideBar
             // 
@@ -81,6 +78,7 @@ namespace DigitalStoreApp
             this.btLogout.TabIndex = 3;
             this.btLogout.Text = "Logout";
             this.btLogout.UseVisualStyleBackColor = true;
+            this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
             // btProfile
             // 
@@ -146,7 +144,7 @@ namespace DigitalStoreApp
             this.btClose.Size = new System.Drawing.Size(42, 41);
             this.btClose.TabIndex = 3;
             this.btClose.UseVisualStyleBackColor = true;
-            //this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // ctrlProduct
             // 
@@ -168,8 +166,7 @@ namespace DigitalStoreApp
             this.ctrlOrder.Name = "ctrlOrder";
             this.ctrlOrder.Size = new System.Drawing.Size(1103, 579);
             this.ctrlOrder.TabIndex = 6;
-            //this.ctrlOrder.Load += new System.EventHandler(this.orderControl1_Load);
-            // 
+            //this.ctrlOrder.Load += new System.EventHandler(this.orderControl1_Load);            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -178,8 +175,6 @@ namespace DigitalStoreApp
             this.ClientSize = new System.Drawing.Size(1356, 715);
             this.ControlBox = false;
             this.Controls.Add(this.ctrlOrder);
-            this.Controls.Add(this.ctrlProfile);
-            this.Controls.Add(this.ctrlProduct);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

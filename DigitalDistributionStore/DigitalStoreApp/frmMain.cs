@@ -17,7 +17,7 @@ namespace DigitalStoreApp
             ctrlProfile.Hide();
             ctrlProduct.Show();
             ctrlProduct.BringToFront();
-           
+
 
             ctrlOrder.loginUser = loginUser;
             ctrlProduct.loginUser = loginUser;
@@ -56,28 +56,14 @@ namespace DigitalStoreApp
 
         private void btClose_Click(object sender, System.EventArgs e)
         {
-            Close();
+            Hide();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
 
         private void ctrlOrder_Load(object sender, System.EventArgs e)
         {
 
-        }
-
-        private void btClose_Click_1(object sender, System.EventArgs e)
-        {
-            Hide();
-            frmLogin frm = new frmLogin();
-            frm.Show();
-        }
-
-        
-
-        private void btLogout_Click_1(object sender, System.EventArgs e)
-        {
-            Hide();
-            frmLogin frm = new frmLogin();
-            frm.Show();
         }
 
         private void btLogout_Click(object sender, System.EventArgs e)
@@ -86,33 +72,5 @@ namespace DigitalStoreApp
             frmLogin frm = new frmLogin();
             frm.Show();
         }
-
-        private void btClose_Click_2(object sender, System.EventArgs e)
-        {
-            Hide();
-            frmLogin frm = new frmLogin();
-            frm.Show();
-        }
-
-        private void btLogout_Click_2(object sender, System.EventArgs e)
-        {
-            Hide();
-            frmLogin frm = new frmLogin();
-            frm.Show();
-        }
-
-        private void btLogout_Click_3(object sender, System.EventArgs e)
-        {
-            Hide();
-            frmLogin frm = new frmLogin();
-            frm.Show();
-        }
-
-        private void btLogout_Click_4(object sender, System.EventArgs e)
-        {
-
-        }
     }
-
-
 }
