@@ -57,24 +57,6 @@ namespace DigitalStoreApp
             dgvDetail.Refresh();
         }
 
-        private void btCancel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (loginUser.IsAdmin == true)
-                {
-                    Close();
-                }
-                else
-                {
-                    //MessageBox.Show("Bill extracted");
-                    Close();
-                }
-            }
-            catch
-            {
-
-            }  
-        }
+        private void btCancel_Click(object sender, EventArgs e) => Close();
     }
 }

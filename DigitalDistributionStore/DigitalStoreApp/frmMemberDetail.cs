@@ -81,7 +81,7 @@ namespace DigitalStoreApp
             {
                 Member member = new Member
                 {
-                    MemberID = loginUser.MemberID,
+                    //MemberID = loginUser.MemberID,
                     MemberName=txbMemberName.Text,
                     Email=txbEmail.Text,
                     Status= cbStatus.Checked,

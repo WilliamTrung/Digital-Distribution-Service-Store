@@ -58,14 +58,19 @@ namespace DataAccess
                 using (var context = new DBContext())
                 {
                     var check = context.Products.SingleOrDefault(p => p.ProductName == product.ProductName);
-                    if (check == null)
+                    if (check != null)
                     {
+                        check.ProductName = product.ProductName;
+                        check.UnitPrice = product.UnitPrice;
+                        check.UnitsInStock = product.UnitsInStock;
+                        check.CategoryID = product.CategoryID;
                         context.Entry<Product>(check).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                        //context.Update(product);
                         context.SaveChanges();
                     }
                     else
                     {
-                        throw new Exception("This product has already existed!");
+                        
                     }
                 }
             }

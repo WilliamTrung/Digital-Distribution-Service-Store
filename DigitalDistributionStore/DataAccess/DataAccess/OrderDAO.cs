@@ -116,7 +116,7 @@ namespace DataAccess
                     }
                     else
                     {
-                        throw new Exception("This order has already closed!");
+                        
                     }
 
                 }
@@ -143,7 +143,7 @@ namespace DataAccess
                     }
                     else
                     {
-                        throw new Exception("This order has no detail!");
+                        
                     }
                 }
             }

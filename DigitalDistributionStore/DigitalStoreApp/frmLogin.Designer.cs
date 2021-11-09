@@ -187,6 +187,7 @@ namespace DigitalStoreApp
             this.txbPassword.ForeColor = System.Drawing.SystemColors.Window;
             this.txbPassword.Location = new System.Drawing.Point(128, 132);
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(447, 27);
             this.txbPassword.TabIndex = 1;
             // 

@@ -35,8 +35,8 @@ namespace DigitalStoreApp
         private void LoadCbCategories()
         {
             var cateList = lib.Categories().GetCategories();
-            cbCategory.DataSource = cateList;
-            cbCategory.ValueMember = "CategoryID";
+            cbCategory.DataSource = cateList.ToList();
+            cbCategory.ValueMember = "CategoryName";
             cbCategory.DisplayMember = "CategoryName";
         }
         private void btConfirm_Click(object sender, System.EventArgs e)
@@ -47,7 +47,7 @@ namespace DigitalStoreApp
                 var name = txbName.Text;
                 int inStock = Int32.Parse(txbAmount.Text);
                 double price = Double.Parse(txbPrice.Text);
-                int categoryId = cbCategory.SelectedIndex;
+                int categoryId = ((Category) cbCategory.SelectedItem).CategoryID;
 
                 Boolean check = true;
                 if (name.Trim().Length == 0)
@@ -71,7 +71,7 @@ namespace DigitalStoreApp
                     {
                         var product = new Product()
                         {
-                            ProductID = id,
+                            //ProductID = id,
                             CategoryID = categoryId,
                             ProductName = name,
                             UnitPrice = price,
