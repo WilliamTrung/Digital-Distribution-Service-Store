@@ -174,7 +174,7 @@ namespace DigitalStoreApp
                     try
                     {
                         //init new order and save to db
-                        /*order = new Order()
+                        order = new Order()
                         {
                             Member = loginUser,
                             MemberID = loginUser.MemberID,
@@ -182,11 +182,11 @@ namespace DigitalStoreApp
                             Status = true,
                             OrderDetails = new List<OrderDetail>()
                         };
-                        order = context.Orders().Insert(order)*/;
+                        order = context.Orders().Insert(order);
                         products = context.Products().GetProducts();
                         LoadProducts(products);
                         LoadCbCategories();
-                        //LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
+                        LoadOrderDetails(context.OrderDetails().GetOrderDetailsByOrder(order));
                         dgvOrder.DataSource = null;
                     }
                     catch
